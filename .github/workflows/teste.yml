@@ -1,11 +1,13 @@
-﻿name: Teste (dry-run, nunca publica)
+name: Teste (dry-run, nunca publica)
 
-# Existe para provar o pipeline na nuvem sem depender do diÃ¡logo de
-# "Run workflow" do GitHub, que estava carregando em erro. Dispara sozinho
-# sempre que este arquivo Ã© tocado.
+# Existe para provar o pipeline na nuvem sem depender do diálogo de
+# "Run workflow" do GitHub, que carrega em erro em alguns navegadores.
+# Dispara sozinho sempre que este arquivo é tocado -- basta mudar qualquer
+# linha e dar push para rodar de novo.
 #
-# O --dry-run estÃ¡ FIXO abaixo, nÃ£o vem de input: este workflow nÃ£o tem como
-# publicar nem por engano. Depois que o pipeline estiver provado, pode apagar.
+# O --dry-run está FIXO abaixo, não vem de input: este workflow não tem como
+# publicar, nem por engano. É a rede de segurança para testar mudanças no card,
+# na legenda ou no programa antes que o cron das 6h leve a sério.
 on:
   push:
     paths:
@@ -34,14 +36,14 @@ jobs:
       - name: Conferir o programa de treinos
         run: python scripts/treino.py
 
-      - name: Simular a publicaÃ§Ã£o de amanhÃ£
+      - name: Simular a publicação de hoje
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USERNAME: natacaocriativa
           INSTAGRAM_API_BASE: https://graph.instagram.com
           META_API_VERSION: v23.0
           TZ: America/Sao_Paulo
-        run: python scripts/postar_treino.py --data 2026-08-29 --dry-run
+        run: python scripts/postar_treino.py --dry-run
 
       - name: Publicar os slides como artefato
         if: always()
@@ -50,5 +52,3 @@ jobs:
           name: slides-teste
           path: cards/
           retention-days: 7
-
-# rodada 2 - apos corrigir o segredo
