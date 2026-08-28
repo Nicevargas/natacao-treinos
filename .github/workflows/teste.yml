@@ -1,0 +1,52 @@
+name: Teste (dry-run, nunca publica)
+
+# Existe para provar o pipeline na nuvem sem depender do diálogo de
+# "Run workflow" do GitHub, que estava carregando em erro. Dispara sozinho
+# sempre que este arquivo é tocado.
+#
+# O --dry-run está FIXO abaixo, não vem de input: este workflow não tem como
+# publicar nem por engano. Depois que o pipeline estiver provado, pode apagar.
+on:
+  push:
+    paths:
+      - ".github/workflows/teste.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  simular:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+
+      - name: Conferir o programa de treinos
+        run: python scripts/treino.py
+
+      - name: Simular a publicação de amanhã
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USERNAME: natacaocriativa
+          INSTAGRAM_API_BASE: https://graph.instagram.com
+          META_API_VERSION: v23.0
+          TZ: America/Sao_Paulo
+        run: python scripts/postar_treino.py --data 2026-08-29 --dry-run
+
+      - name: Publicar os slides como artefato
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: slides-teste
+          path: cards/
+          retention-days: 7
