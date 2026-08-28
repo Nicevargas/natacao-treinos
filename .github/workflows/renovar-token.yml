@@ -1,0 +1,39 @@
+name: Renovar token do Instagram
+
+on:
+  # Toda segunda. O token vale 60 dias; renovar semanalmente dá 8 chances de
+  # acertar antes de vencer, então uma falha isolada não derruba a operação.
+  schedule:
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+jobs:
+  renovar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Renovar e gravar o segredo
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          # O GITHUB_TOKEN padrão NÃO pode escrever segredos; por isso um PAT
+          # fino, com escopo "Secrets: read and write" só neste repositório.
+          GH_TOKEN: ${{ secrets.PAT_SEGREDOS }}
+        run: |
+          set -euo pipefail
+          NOVO=$(python scripts/renovar_token.py)
+          if [ -z "$NOVO" ]; then
+            echo "Token vazio; nada foi gravado." >&2
+            exit 1
+          fi
+          printf '%s' "$NOVO" | gh secret set INSTAGRAM_ACCESS_TOKEN \
+            --repo "${{ github.repository }}"
+          echo "Segredo atualizado."

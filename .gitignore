@@ -1,0 +1,13 @@
+# O token do Instagram mora aqui. Este repositório é público (precisa ser, para
+# o raw.githubusercontent servir as imagens à Meta). Um .env vazado dá controle
+# da conta a quem achar.
+.env
+.env.*
+!.env.exemplo
+
+# Cards são gerados; só os que forem publicados entram, e entram em publicadas/.
+cards/
+
+__pycache__/
+*.pyc
+.venv/

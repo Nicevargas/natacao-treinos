@@ -1,0 +1,89 @@
+name: Publicar treino do dia
+
+on:
+  schedule:
+    # 09:00 UTC = 06:00 em Brasília. O Brasil não tem mais horário de verão,
+    # então isso vale o ano inteiro. O agendador do GitHub é best-effort: pode
+    # atrasar de 5 a 30 min em horário de pico.
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Só simular (não publica)"
+        type: boolean
+        default: true
+      data:
+        description: "Data AAAA-MM-DD (vazio = hoje)"
+        required: false
+
+# Necessário para commitar os slides: a Meta não aceita upload de arquivo, só
+# URL pública, e quem serve essa URL é o raw deste próprio repositório.
+permissions:
+  contents: write
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Instalar o Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Conferir o programa de treinos
+        run: python scripts/treino.py
+
+      - name: Identidade do commit das imagens
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Publicar
+        env:
+          # O token vem do segredo; o resto é fixo e pode ficar à vista.
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_BUSINESS_ID: ${{ secrets.INSTAGRAM_BUSINESS_ID }}
+          INSTAGRAM_USERNAME: natacaocriativa
+          INSTAGRAM_API_BASE: https://graph.instagram.com
+          META_API_VERSION: v23.0
+          GITHUB_REPO_DIR: ${{ github.workspace }}
+          GITHUB_RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/main/publicadas
+          # O runner roda em UTC. Sem isto, date.today() daria o dia errado
+          # sempre que a execução cruzasse a meia-noite de Brasília.
+          TZ: America/Sao_Paulo
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.data }}" ]; then ARGS="$ARGS --data ${{ inputs.data }}"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python scripts/postar_treino.py $ARGS
+
+      - name: Guardar o registro do dia
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git add publicadas
+          if ! git diff --cached --quiet; then
+            git commit -m "Registro do treino publicado"
+            git push origin main
+          fi
+
+      - name: Guardar os slides como artefato
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: slides
+          path: cards/
+          retention-days: 7
