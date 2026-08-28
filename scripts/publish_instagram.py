@@ -42,6 +42,10 @@ for candidate in [SCRIPT_DIR / ".env", *(p / ".env" for p in SCRIPT_DIR.parents)
         break
 
 TOKEN = os.getenv("INSTAGRAM_ACCESS_TOKEN")
+# Opcional de proposito. Nesta rota nenhuma chamada usa este ID -- todas vao
+# por /me -- entao exigi-lo so criava mais um segredo para manter sem ganho
+# nenhum de seguranca. Quem impede publicar na conta errada e a comparacao de
+# INSTAGRAM_USERNAME logo abaixo, essa sim indispensavel.
 IG_ID = os.getenv("INSTAGRAM_BUSINESS_ID")
 API_BASE = os.getenv("INSTAGRAM_API_BASE", "https://graph.instagram.com")
 VERSION = os.getenv("META_API_VERSION", "v23.0")
@@ -60,8 +64,12 @@ def die(msg: str) -> None:
 
 
 def check_credentials() -> None:
-    if not TOKEN or not IG_ID:
-        die("Credenciais nao encontradas. Confira o .env.")
+    if not TOKEN:
+        die("INSTAGRAM_ACCESS_TOKEN nao encontrado. Confira o .env "
+            "(ou o segredo do repositorio, se estiver no GitHub Actions).")
+    if not ESPERADA:
+        die("INSTAGRAM_USERNAME nao definido. Sem ele nao ha como garantir que "
+            "o token e da conta certa, e publicar na conta errada e irreversivel.")
     resp = requests.get(
         f"{BASE_URL}/{ACCOUNT}",
         params={"fields": "username", "access_token": TOKEN},
