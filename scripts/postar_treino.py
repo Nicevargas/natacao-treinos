@@ -12,10 +12,13 @@ Uso:
 """
 import argparse
 import json
+import os
 import subprocess
 import sys
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+
+import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -30,6 +33,10 @@ for _s in (sys.stdout, sys.stderr):
 
 RAIZ = Path(__file__).resolve().parent.parent
 REGISTRO = RAIZ / "publicadas" / "registro.json"
+
+# O Brasil não tem mais horário de verão desde 2019, então o deslocamento é
+# fixo. Fuso explícito, e não o do sistema: o runner do GitHub roda em UTC.
+BRASILIA = timezone(timedelta(hours=-3))
 
 
 # ------------------------------------------------------------------ legenda
@@ -91,12 +98,57 @@ def montar_legenda(t: dict, dados: dict, quando: date) -> str:
 # ----------------------------------------------------------------- registro
 
 def ja_publicado(quando: date):
-    """O registro é comitado junto com as imagens, então sobrevive entre runs do
-    Actions -- que são máquinas descartáveis. É a única trava contra publicar
-    duas vezes no mesmo dia se o workflow disparar repetido."""
+    """Registro local do que já saiu. Sobrevive entre runs do Actions porque é
+    commitado -- o runner em si é máquina descartável.
+
+    Não serve sozinho como trava: ele só é gravado DEPOIS de publicar, então um
+    push que falhe deixa o dia publicado sem registro. Quem fecha esse buraco é
+    publicado_na_conta(), abaixo."""
     if not REGISTRO.exists():
         return None
     return json.loads(REGISTRO.read_text(encoding="utf-8")).get(quando.isoformat())
+
+
+def publicado_na_conta(quando: date) -> str | None:
+    """Pergunta à própria conta se já há publicação com a data pedida.
+
+    Esta é a trava que vale. Com três tentativas de cron por dia, confiar só no
+    arquivo commitado é frágil: basta o push do registro falhar para a tentativa
+    seguinte republicar o mesmo carrossel. O feed é a fonte de verdade e não
+    depende do git ter dado certo.
+
+    Falha de rede aqui devolve None (segue para o registro local) em vez de
+    abortar: barrar a publicação por causa de uma consulta instável seria pior
+    que o risco que ela cobre.
+    """
+    token = os.getenv("INSTAGRAM_ACCESS_TOKEN")
+    if not token:
+        return None
+
+    base = os.getenv("INSTAGRAM_API_BASE", "https://graph.instagram.com")
+    versao = os.getenv("META_API_VERSION", "v23.0")
+    try:
+        r = requests.get(f"{base}/{versao}/me/media",
+                         params={"fields": "id,timestamp,permalink",
+                                 "limit": 10, "access_token": token},
+                         timeout=30)
+        itens = r.json().get("data") or []
+    except Exception as e:
+        print(f"  (não deu para consultar o feed: {type(e).__name__}; "
+              f"seguindo pelo registro local)")
+        return None
+
+    for item in itens:
+        carimbo = item.get("timestamp", "")
+        try:
+            # A Meta devolve com fuso; converter para Brasília antes de comparar,
+            # senão um post das 21h vira o dia seguinte.
+            quando_saiu = datetime.fromisoformat(carimbo).astimezone(BRASILIA).date()
+        except ValueError:
+            continue
+        if quando_saiu == quando:
+            return item.get("permalink") or item.get("id")
+    return None
 
 
 def anotar(quando: date, t: dict, arquivos: list) -> None:
@@ -133,10 +185,17 @@ def main() -> int:
 
     t = treino.treino_de(dados, quando)
 
-    if (anterior := ja_publicado(quando)) and not args.forcar:
-        print(f"O treino de {quando.isoformat()} já foi publicado "
-              f"(dia {anterior['dia_do_ciclo']} do ciclo). Nada a fazer.")
-        return 0
+    if not args.forcar and not args.dry_run:
+        # A conta primeiro: é a fonte de verdade e não depende de o git ter
+        # conseguido gravar o registro.
+        if onde := publicado_na_conta(quando):
+            print(f"A conta já tem publicação de {quando.isoformat()}: {onde}. "
+                  f"Nada a fazer.")
+            return 0
+        if anterior := ja_publicado(quando):
+            print(f"O treino de {quando.isoformat()} já consta no registro "
+                  f"(dia {anterior['dia_do_ciclo']} do ciclo). Nada a fazer.")
+            return 0
 
     totais = " / ".join(f"{treino.total_do_nivel(t['niveis'][n])}m"
                         for n in gerar_card.ORDEM_NIVEIS)

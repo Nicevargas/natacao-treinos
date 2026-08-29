@@ -2,10 +2,19 @@ name: Publicar treino do dia
 
 on:
   schedule:
-    # 09:00 UTC = 06:00 em Brasília. O Brasil não tem mais horário de verão,
-    # então isso vale o ano inteiro. O agendador do GitHub é best-effort: pode
-    # atrasar de 5 a 30 min em horário de pico.
-    - cron: "0 9 * * *"
+    # Horários em UTC; Brasília é UTC-3 e não tem mais horário de verão, então
+    # isto vale o ano inteiro.
+    #
+    # NUNCA no minuto zero: o agendador do GitHub adia o evento `schedule` em
+    # carga alta, e o início de cada hora é justamente o pico. Com "0 9" a
+    # execução de 29/08 não aconteceu -- não atrasou, foi pulada.
+    #
+    # Três tentativas em vez de uma. A primeira que rodar publica; as seguintes
+    # veem o dia já publicado e saem sem fazer nada, então redundância aqui não
+    # vira post duplicado.
+    - cron: "13 9 * * *"    # 06:13 em Brasília
+    - cron: "43 9 * * *"    # 06:43 -- rede, se a primeira for adiada
+    - cron: "23 10 * * *"   # 07:23 -- última chance do dia
   workflow_dispatch:
     inputs:
       dry_run:
