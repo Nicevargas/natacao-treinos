@@ -268,7 +268,7 @@ def css() -> str:
 
   .folha {{
     position:relative; z-index:1; width:100%; height:100%;
-    display:flex; flex-direction:column; padding:40px 46px 34px;
+    display:flex; flex-direction:column; padding:30px 46px 24px;
   }}
 
   /* ----------------------------------------------------------- cabeçalho */
@@ -291,16 +291,16 @@ def css() -> str:
   header h1 {{
     flex:1;
     font-family:"Titulo","Arial Narrow",Impact,sans-serif;
-    font-size:96px; line-height:.9; letter-spacing:1px; text-transform:uppercase;
+    font-size:86px; line-height:.9; letter-spacing:1px; text-transform:uppercase;
     text-shadow:0 5px 18px rgba(0,0,0,.6);
   }}
   header h1 em {{ font-style:normal; color:{AZUL}; }}
 
   /* ------------------------------------------------------------- réguas */
   .regua {{
-    display:flex; align-items:center; gap:20px; margin-top:26px;
+    display:flex; align-items:center; gap:20px; margin-top:16px;
     font-family:"Titulo","Arial Narrow",sans-serif;
-    font-size:42px; letter-spacing:5px; text-transform:uppercase;
+    font-size:36px; letter-spacing:5px; text-transform:uppercase;
   }}
   .regua::before, .regua::after {{
     content:""; flex:1; height:3px; border-radius:2px;
@@ -309,21 +309,21 @@ def css() -> str:
   .regua::after  {{ background:linear-gradient(90deg,{AZUL},{VERDE},transparent); }}
 
   /* -------------------------------------------------------------- chips */
-  .chips {{ display:flex; gap:14px; margin-top:22px; }}
+  .chips {{ display:flex; gap:14px; margin-top:14px; }}
   .chip {{
     display:flex; align-items:center; gap:10px;
-    border-radius:999px; padding:10px 22px 10px 16px;
-    font-size:27px; font-weight:700; color:#fff;
+    border-radius:999px; padding:8px 20px 8px 14px;
+    font-size:25px; font-weight:700; color:#fff;
     box-shadow:0 5px 14px rgba(0,0,0,.4);
   }}
   .chip .ic {{ opacity:.95; }}
 
   .tarja {{
-    margin-top:16px; display:flex; align-items:center; gap:16px;
+    margin-top:11px; display:flex; align-items:center; gap:16px;
     border:3px solid var(--cor); border-radius:18px;
     background:linear-gradient(90deg, color-mix(in srgb, var(--cor) 26%, #061630),
                                rgba(6,22,48,.94));
-    padding:13px 24px;
+    padding:10px 22px;
   }}
   .tarja .bolinha {{
     width:24px; height:24px; border-radius:50%; background:var(--cor); flex:none;
@@ -339,7 +339,7 @@ def css() -> str:
 
   /* ------------------------------------------------------------- painel */
   .painel {{
-    flex:1; margin-top:18px;
+    flex:1; margin-top:12px;
     border:2px solid rgba(120,180,255,.28); border-radius:26px;
     background:rgba(5,16,38,.94);
     box-shadow:0 16px 40px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);
@@ -384,21 +384,21 @@ def css() -> str:
 
   /* ------------------------------------------------------------- rodapé */
   footer {{
-    margin-top:20px; display:flex; align-items:center; gap:22px;
+    margin-top:13px; display:flex; align-items:center; gap:20px;
     border:3px solid {ROSA}; border-radius:26px;
-    background:rgba(6,20,46,.72); padding:16px 26px;
+    background:rgba(6,20,46,.72); padding:11px 24px;
   }}
-  .mini-logo {{ width:86px; height:86px; object-fit:contain; flex:none; }}
+  .mini-logo {{ width:74px; height:74px; object-fit:contain; flex:none; }}
   .mini-falso {{
     width:74px; height:74px; border-radius:50%; flex:none;
     background:linear-gradient(135deg,{ROSA},{AMARELO},{VERDE},{AZUL});
     display:flex; align-items:center; justify-content:center;
     font-weight:800; font-size:30px; color:#06142e;
   }}
-  .chamada {{ flex:1; font-size:33px; line-height:1.22; }}
+  .chamada {{ flex:1; font-size:30px; line-height:1.2; }}
   .chamada b {{ color:{AZUL}; }}
   .balao {{
-    width:74px; height:74px; border-radius:20px; flex:none;
+    width:64px; height:64px; border-radius:20px; flex:none;
     background:{ROSA}; color:#fff;
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 6px 16px rgba(0,0,0,.45);

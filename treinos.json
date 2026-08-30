@@ -3,16 +3,26 @@
   "_ancora_por_que": "28 e multiplo de 7, logo cada posicao do ciclo cai SEMPRE no mesmo dia da semana. Com a ancora numa segunda, o padrao se mantem: Seg tecnica / Ter aerobico / Qua velocidade / Qui estilos / Sex volume / Sab material / Dom regenerativo.",
   "_regra_dos_niveis": "Subir de nivel e ACRESCENTAR exercicio novo, nunca esticar um que ja existe. Nada de 4x100m virar 6x100m, nem 200m leve virar 300m leve. Os tres niveis nao repetem exercicio entre si. O vermelho e o unico que traz EDUCATIVOS.",
   "_metragem": "Nenhum total e escrito a mao: sai da soma das series (o cabecalho '8x50m' vale 400m; os detalhes repartem o que ja foi contado). Rode scripts/treino.py para conferir.",
-  "_estado": "SEMANA 1 COMPLETA (dias 1-7). Dias 8-28 pendentes.",
+  "_estado": "CICLO COMPLETO: 28 dias, 84 treinos.",
   "ancora": "2026-08-31",
   "handle": "@natacaocriativa",
-
   "rotulos": {
-    "verde":    { "nome": "Menor volume",           "cor": "#8DC63F", "emoji": "🟢" },
-    "amarelo":  { "nome": "Intermediário",          "cor": "#F7B90B", "emoji": "🟡" },
-    "vermelho": { "nome": "Maior volume + técnica", "cor": "#E01B62", "emoji": "🔴" }
+    "verde": {
+      "nome": "Menor volume",
+      "cor": "#8DC63F",
+      "emoji": "🟢"
+    },
+    "amarelo": {
+      "nome": "Intermediário",
+      "cor": "#F7B90B",
+      "emoji": "🟡"
+    },
+    "vermelho": {
+      "nome": "Maior volume + técnica",
+      "cor": "#E01B62",
+      "emoji": "🔴"
+    }
   },
-
   "glossario": [
     {
       "termo": "EDUCATIVOS",
@@ -23,352 +33,3284 @@
       "texto": "Pequenos movimentos das mãos e antebraços para desenvolver sensibilidade, percepção e apoio na água, buscando transferir essa sensação para a braçada."
     }
   ],
-
   "treinos": [
     {
-      "dia": 1, "semana": 1, "bloco": "Base", "foco": "Técnica",
+      "dia": 1,
+      "semana": 1,
+      "bloco": "Base",
+      "foco": "Técnica",
       "niveis": {
         "verde": {
           "aquecimento": [
-            { "serie": "200m Crawl leve" },
-            { "serie": "4x25m Sculling frontal", "intervalo": "20\"" }
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "4x25m Sculling frontal",
+              "intervalo": "20\""
+            }
           ],
           "principal": [
-            { "serie": "8x50m Crawl", "detalhes": ["25m ponta do dedo", "25m nado completo"], "intervalo": "20\"" },
-            { "serie": "4x100m Crawl", "detalhes": ["50m respirando de 3", "50m respirando de 5"], "intervalo": "30\"" }
+            {
+              "serie": "8x50m Crawl",
+              "detalhes": [
+                "25m ponta do dedo",
+                "25m nado completo"
+              ],
+              "intervalo": "20\""
+            },
+            {
+              "serie": "4x100m Crawl",
+              "detalhes": [
+                "50m respirando de 3",
+                "50m respirando de 5"
+              ],
+              "intervalo": "30\""
+            }
           ],
           "final": [
-            { "serie": "100m Costas solto" }
+            {
+              "serie": "100m Costas solto"
+            }
           ]
         },
         "amarelo": {
           "aquecimento": [
-            { "serie": "300m Crawl progressivo" },
-            { "serie": "4x50m Pernada lateral c/ prancha", "intervalo": "25\"" }
+            {
+              "serie": "300m Crawl progressivo"
+            },
+            {
+              "serie": "4x50m Pernada lateral c/ prancha",
+              "intervalo": "25\""
+            }
           ],
           "principal": [
-            { "serie": "6x75m Crawl", "detalhes": ["25m braço único direito", "25m braço único esquerdo", "25m nado completo"], "intervalo": "30\"" },
-            { "serie": "5x100m Crawl", "detalhes": ["Contando braçadas", "Manter o mesmo número"], "intervalo": "35\"" },
-            { "serie": "6x50m Crawl", "detalhes": ["Respiração 3-5-7"], "intervalo": "25\"" }
+            {
+              "serie": "6x75m Crawl",
+              "detalhes": [
+                "25m braço único direito",
+                "25m braço único esquerdo",
+                "25m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "5x100m Crawl",
+              "detalhes": [
+                "Contando braçadas",
+                "Manter o mesmo número"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "Respiração 3-5-7"
+              ],
+              "intervalo": "25\""
+            }
           ],
           "final": [
-            { "serie": "150m Costas solto" },
-            { "serie": "100m Peito técnico" }
+            {
+              "serie": "150m Costas solto"
+            },
+            {
+              "serie": "100m Peito técnico"
+            }
           ]
         },
         "vermelho": {
           "aquecimento": [
-            { "serie": "400m Crawl", "detalhes": ["Alternando 50m nado / 50m pernada"] },
-            { "serie": "200m Sculling médio" },
-            { "serie": "4x50m Crawl progressivo", "intervalo": "20\"" }
+            {
+              "serie": "400m Crawl",
+              "detalhes": [
+                "Alternando 50m nado / 50m pernada"
+              ]
+            },
+            {
+              "serie": "200m Sculling médio"
+            },
+            {
+              "serie": "4x50m Crawl progressivo",
+              "intervalo": "20\""
+            }
           ],
           "principal": [
-            { "serie": "8x75m EDUCATIVO", "detalhes": ["25m ponta do dedo alta", "25m deslize longo", "25m nado completo"], "intervalo": "30\"" },
-            { "serie": "6x150m Crawl", "detalhes": ["50m técnica exagerada", "100m ritmo de prova"], "intervalo": "40\"" },
-            { "serie": "4x100m Crawl c/ Palmar", "detalhes": ["Foco no apoio da mão"], "intervalo": "35\"" },
-            { "serie": "8x25m Crawl máximo", "detalhes": ["Técnica intacta na velocidade"], "intervalo": "40\"" }
+            {
+              "serie": "8x75m EDUCATIVO",
+              "detalhes": [
+                "25m ponta do dedo alta",
+                "25m deslize longo",
+                "25m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "6x150m Crawl",
+              "detalhes": [
+                "50m técnica exagerada",
+                "100m ritmo de prova"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x100m Crawl c/ Palmar",
+              "detalhes": [
+                "Foco no apoio da mão"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "8x25m Crawl máximo",
+              "detalhes": [
+                "Técnica intacta na velocidade"
+              ],
+              "intervalo": "40\""
+            }
           ],
           "final": [
-            { "serie": "300m Costas contínuo" },
-            { "serie": "200m Crawl solto" }
+            {
+              "serie": "300m Costas contínuo"
+            },
+            {
+              "serie": "200m Crawl solto"
+            }
           ]
         }
       }
     },
-
     {
-      "dia": 2, "semana": 1, "bloco": "Base", "foco": "Aeróbico",
+      "dia": 2,
+      "semana": 1,
+      "bloco": "Base",
+      "foco": "Aeróbico",
       "niveis": {
         "verde": {
           "aquecimento": [
-            { "serie": "200m Crawl leve" },
-            { "serie": "100m Pernada c/ prancha" }
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ prancha"
+            }
           ],
           "principal": [
-            { "serie": "3x200m Crawl", "detalhes": ["Ritmo constante do início ao fim"], "intervalo": "30\"" },
-            { "serie": "6x50m Crawl progressivo", "intervalo": "25\"" }
+            {
+              "serie": "3x200m Crawl",
+              "detalhes": [
+                "Ritmo constante do início ao fim"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "6x50m Crawl progressivo",
+              "intervalo": "25\""
+            }
           ],
           "final": [
-            { "serie": "100m Peito leve" },
-            { "serie": "100m Crawl solto" }
+            {
+              "serie": "100m Peito leve"
+            },
+            {
+              "serie": "100m Crawl solto"
+            }
           ]
         },
         "amarelo": {
           "aquecimento": [
-            { "serie": "300m Crawl alternando com Costas" },
-            { "serie": "4x50m Pernada c/ nadadeira", "intervalo": "20\"" }
+            {
+              "serie": "300m Crawl alternando com Costas"
+            },
+            {
+              "serie": "4x50m Pernada c/ nadadeira",
+              "intervalo": "20\""
+            }
           ],
           "principal": [
-            { "serie": "3x300m Crawl", "detalhes": ["Ritmo que dê para sustentar até o fim"], "intervalo": "40\"" },
-            { "serie": "6x100m Crawl forte", "intervalo": "25\"" }
+            {
+              "serie": "3x300m Crawl",
+              "detalhes": [
+                "Ritmo que dê para sustentar até o fim"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "6x100m Crawl forte",
+              "intervalo": "25\""
+            }
           ],
           "final": [
-            { "serie": "200m Costas solto" }
+            {
+              "serie": "200m Costas solto"
+            }
           ]
         },
         "vermelho": {
           "aquecimento": [
-            { "serie": "400m Crawl leve" },
-            { "serie": "6x50m Crawl", "detalhes": ["Respiração bilateral obrigatória"], "intervalo": "25\"" },
-            { "serie": "200m Pernada lateral alternada" }
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "Respiração bilateral obrigatória"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Pernada lateral alternada"
+            }
           ],
           "principal": [
-            { "serie": "6x100m EDUCATIVO", "detalhes": ["50m rolamento de corpo exagerado", "50m nado completo"], "intervalo": "30\"" },
-            { "serie": "2x600m Crawl", "detalhes": ["Ritmo constante, sem acelerar no fim"], "intervalo": "60\"" },
-            { "serie": "3x200m Crawl progressivo", "detalhes": ["Cada 200m mais rápido que o anterior"], "intervalo": "35\"" }
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m rolamento de corpo exagerado",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "2x600m Crawl",
+              "detalhes": [
+                "Ritmo constante, sem acelerar no fim"
+              ],
+              "intervalo": "60\""
+            },
+            {
+              "serie": "3x200m Crawl progressivo",
+              "detalhes": [
+                "Cada 200m mais rápido que o anterior"
+              ],
+              "intervalo": "35\""
+            }
           ],
           "final": [
-            { "serie": "200m Peito solto" },
-            { "serie": "100m Costas leve" }
+            {
+              "serie": "200m Peito solto"
+            },
+            {
+              "serie": "100m Costas leve"
+            }
           ]
         }
       }
     },
-
     {
-      "dia": 3, "semana": 1, "bloco": "Base", "foco": "Velocidade",
+      "dia": 3,
+      "semana": 1,
+      "bloco": "Base",
+      "foco": "Velocidade",
       "niveis": {
         "verde": {
           "aquecimento": [
-            { "serie": "200m Crawl leve" },
-            { "serie": "4x25m progressivo", "intervalo": "25\"" }
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "4x25m progressivo",
+              "intervalo": "25\""
+            }
           ],
           "principal": [
-            { "serie": "8x25m Crawl máximo", "intervalo": "45\"" },
-            { "serie": "6x50m Crawl", "detalhes": ["15m explosão", "35m controlado"], "intervalo": "50\"" }
+            {
+              "serie": "8x25m Crawl máximo",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "15m explosão",
+                "35m controlado"
+              ],
+              "intervalo": "50\""
+            }
           ],
           "final": [
-            { "serie": "200m Costas regenerativo" }
+            {
+              "serie": "200m Costas regenerativo"
+            }
           ]
         },
         "amarelo": {
           "aquecimento": [
-            { "serie": "300m Crawl solto" },
-            { "serie": "4x50m", "detalhes": ["25m pernada forte", "25m nado leve"], "intervalo": "30\"" }
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "4x50m",
+              "detalhes": [
+                "25m pernada forte",
+                "25m nado leve"
+              ],
+              "intervalo": "30\""
+            }
           ],
           "principal": [
-            { "serie": "10x50m Crawl", "detalhes": ["25m máximo", "25m recuperação ativa"], "intervalo": "40\"" },
-            { "serie": "4x75m Crawl", "detalhes": ["25m forte", "25m máximo", "25m solto"], "intervalo": "45\"" },
-            { "serie": "6x100m Crawl ritmo de prova", "intervalo": "35\"" }
+            {
+              "serie": "10x50m Crawl",
+              "detalhes": [
+                "25m máximo",
+                "25m recuperação ativa"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x75m Crawl",
+              "detalhes": [
+                "25m forte",
+                "25m máximo",
+                "25m solto"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "6x100m Crawl ritmo de prova",
+              "intervalo": "35\""
+            }
           ],
           "final": [
-            { "serie": "200m Peito solto" }
+            {
+              "serie": "200m Peito solto"
+            }
           ]
         },
         "vermelho": {
           "aquecimento": [
-            { "serie": "400m Crawl alternando ritmos" },
-            { "serie": "6x25m Pernada de saída submersa", "intervalo": "30\"" },
-            { "serie": "150m Sculling frontal" }
+            {
+              "serie": "400m Crawl alternando ritmos"
+            },
+            {
+              "serie": "6x25m Pernada de saída submersa",
+              "intervalo": "30\""
+            },
+            {
+              "serie": "150m Sculling frontal"
+            }
           ],
           "principal": [
-            { "serie": "8x50m EDUCATIVO", "detalhes": ["25m frequência alta de braçada", "25m nado completo"], "intervalo": "30\"" },
-            { "serie": "12x25m Crawl", "detalhes": ["Saída da borda, velocidade máxima"], "intervalo": "40\"" },
-            { "serie": "6x75m Crawl", "detalhes": ["50m máximo", "25m recuperação"], "intervalo": "50\"" },
-            { "serie": "4x150m Crawl", "detalhes": ["50m forte", "50m solto", "50m máximo"], "intervalo": "45\"" },
-            { "serie": "4x100m Crawl c/ Palmar", "detalhes": ["Velocidade com apoio longo"], "intervalo": "35\"" }
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "25m frequência alta de braçada",
+                "25m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "12x25m Crawl",
+              "detalhes": [
+                "Saída da borda, velocidade máxima"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "6x75m Crawl",
+              "detalhes": [
+                "50m máximo",
+                "25m recuperação"
+              ],
+              "intervalo": "50\""
+            },
+            {
+              "serie": "4x150m Crawl",
+              "detalhes": [
+                "50m forte",
+                "50m solto",
+                "50m máximo"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "4x100m Crawl c/ Palmar",
+              "detalhes": [
+                "Velocidade com apoio longo"
+              ],
+              "intervalo": "35\""
+            }
           ],
           "final": [
-            { "serie": "250m Costas contínuo" },
-            { "serie": "100m Crawl bem leve" }
+            {
+              "serie": "250m Costas contínuo"
+            },
+            {
+              "serie": "100m Crawl bem leve"
+            }
           ]
         }
       }
     },
-
     {
-      "dia": 4, "semana": 1, "bloco": "Base", "foco": "Estilos",
+      "dia": 4,
+      "semana": 1,
+      "bloco": "Base",
+      "foco": "Estilos",
       "niveis": {
         "verde": {
           "aquecimento": [
-            { "serie": "100m Crawl" },
-            { "serie": "100m Costas" },
-            { "serie": "100m Peito" }
+            {
+              "serie": "100m Crawl"
+            },
+            {
+              "serie": "100m Costas"
+            },
+            {
+              "serie": "100m Peito"
+            }
           ],
           "principal": [
-            { "serie": "4x100m Medley", "intervalo": "45\"" },
-            { "serie": "8x50m", "detalhes": ["25m Borboleta", "25m Crawl"], "intervalo": "35\"" }
+            {
+              "serie": "4x100m Medley",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "8x50m",
+              "detalhes": [
+                "25m Borboleta",
+                "25m Crawl"
+              ],
+              "intervalo": "35\""
+            }
           ],
           "final": [
-            { "serie": "200m Crawl solto" }
+            {
+              "serie": "200m Crawl solto"
+            }
           ]
         },
         "amarelo": {
           "aquecimento": [
-            { "serie": "200m Medley contínuo" },
-            { "serie": "4x50m Pernada borboleta c/ nadadeira", "intervalo": "30\"" }
+            {
+              "serie": "200m Medley contínuo"
+            },
+            {
+              "serie": "4x50m Pernada borboleta c/ nadadeira",
+              "intervalo": "30\""
+            }
           ],
           "principal": [
-            { "serie": "6x75m", "detalhes": ["25m Borboleta", "25m Costas", "25m Peito"], "intervalo": "40\"" },
-            { "serie": "5x100m Costas forte", "intervalo": "30\"" },
-            { "serie": "6x50m Peito", "detalhes": ["Braçada longa, contando o mínimo"], "intervalo": "35\"" },
-            { "serie": "4x75m Crawl progressivo", "intervalo": "30\"" }
+            {
+              "serie": "6x75m",
+              "detalhes": [
+                "25m Borboleta",
+                "25m Costas",
+                "25m Peito"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "5x100m Costas forte",
+              "intervalo": "30\""
+            },
+            {
+              "serie": "6x50m Peito",
+              "detalhes": [
+                "Braçada longa, contando o mínimo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "4x75m Crawl progressivo",
+              "intervalo": "30\""
+            }
           ],
           "final": [
-            { "serie": "150m Costas solto" }
+            {
+              "serie": "150m Costas solto"
+            }
           ]
         },
         "vermelho": {
           "aquecimento": [
-            { "serie": "300m Crawl leve" },
-            { "serie": "4x75m", "detalhes": ["25m Costas", "25m Peito", "25m Crawl"], "intervalo": "35\"" },
-            { "serie": "200m Pernada alternando os 4 estilos" }
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "4x75m",
+              "detalhes": [
+                "25m Costas",
+                "25m Peito",
+                "25m Crawl"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "200m Pernada alternando os 4 estilos"
+            }
           ],
           "principal": [
-            { "serie": "8x50m EDUCATIVO", "detalhes": ["Um por estilo: entrada de mão,", "cotovelo alto, timing da pernada"], "intervalo": "35\"" },
-            { "serie": "4x200m Medley", "intervalo": "50\"" },
-            { "serie": "6x100m", "detalhes": ["50m Borboleta", "50m Costas"], "intervalo": "40\"" },
-            { "serie": "2x150m Medley sem Borboleta", "detalhes": ["50m Costas", "50m Peito", "50m Crawl"], "intervalo": "40\"" }
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "Um por estilo: entrada de mão,",
+                "cotovelo alto, timing da pernada"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "4x200m Medley",
+              "intervalo": "50\""
+            },
+            {
+              "serie": "6x100m",
+              "detalhes": [
+                "50m Borboleta",
+                "50m Costas"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "2x150m Medley sem Borboleta",
+              "detalhes": [
+                "50m Costas",
+                "50m Peito",
+                "50m Crawl"
+              ],
+              "intervalo": "40\""
+            }
           ],
           "final": [
-            { "serie": "300m Crawl solto" },
-            { "serie": "200m Peito leve" }
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "200m Peito leve"
+            }
           ]
         }
       }
     },
-
     {
-      "dia": 5, "semana": 1, "bloco": "Base", "foco": "Volume",
+      "dia": 5,
+      "semana": 1,
+      "bloco": "Base",
+      "foco": "Volume",
       "niveis": {
         "verde": {
           "aquecimento": [
-            { "serie": "300m Crawl leve" },
-            { "serie": "100m Pernada c/ prancha" }
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ prancha"
+            }
           ],
           "principal": [
-            { "serie": "2x300m Crawl", "detalhes": ["Ritmo sustentável"], "intervalo": "45\"" },
-            { "serie": "4x100m Crawl forte", "intervalo": "30\"" }
+            {
+              "serie": "2x300m Crawl",
+              "detalhes": [
+                "Ritmo sustentável"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "4x100m Crawl forte",
+              "intervalo": "30\""
+            }
           ],
           "final": [
-            { "serie": "100m Costas" },
-            { "serie": "100m Crawl solto" }
+            {
+              "serie": "100m Costas"
+            },
+            {
+              "serie": "100m Crawl solto"
+            }
           ]
         },
         "amarelo": {
           "aquecimento": [
-            { "serie": "400m Crawl progressivo" },
-            { "serie": "200m Pernada c/ nadadeira" }
+            {
+              "serie": "400m Crawl progressivo"
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
           ],
           "principal": [
-            { "serie": "800m Crawl contínuo", "detalhes": ["Ritmo de treino longo"] },
-            { "serie": "4x250m Crawl", "detalhes": ["Ritmo um pouco acima do contínuo"], "intervalo": "40\"" }
+            {
+              "serie": "800m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de treino longo"
+              ]
+            },
+            {
+              "serie": "4x250m Crawl",
+              "detalhes": [
+                "Ritmo um pouco acima do contínuo"
+              ],
+              "intervalo": "40\""
+            }
           ],
           "final": [
-            { "serie": "200m Costas solto" }
+            {
+              "serie": "200m Costas solto"
+            }
           ]
         },
         "vermelho": {
           "aquecimento": [
-            { "serie": "400m Crawl alternando 100m leve / 100m moderado" },
-            { "serie": "6x50m Crawl c/ Palmar", "intervalo": "25\"" }
+            {
+              "serie": "400m Crawl alternando 100m leve / 100m moderado"
+            },
+            {
+              "serie": "6x50m Crawl c/ Palmar",
+              "intervalo": "25\""
+            }
           ],
           "principal": [
-            { "serie": "6x100m EDUCATIVO", "detalhes": ["50m nado com punho fechado", "50m nado completo"], "intervalo": "30\"" },
-            { "serie": "1000m Crawl contínuo", "detalhes": ["Sem parar, ritmo confortável"] },
-            { "serie": "3x400m Crawl", "detalhes": ["Cada 400m mais forte que o anterior"], "intervalo": "50\"" }
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m nado com punho fechado",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "1000m Crawl contínuo",
+              "detalhes": [
+                "Sem parar, ritmo confortável"
+              ]
+            },
+            {
+              "serie": "3x400m Crawl",
+              "detalhes": [
+                "Cada 400m mais forte que o anterior"
+              ],
+              "intervalo": "50\""
+            }
           ],
           "final": [
-            { "serie": "300m Costas contínuo" },
-            { "serie": "200m Peito solto" }
+            {
+              "serie": "300m Costas contínuo"
+            },
+            {
+              "serie": "200m Peito solto"
+            }
           ]
         }
       }
     },
-
     {
-      "dia": 6, "semana": 1, "bloco": "Base", "foco": "Material",
+      "dia": 6,
+      "semana": 1,
+      "bloco": "Base",
+      "foco": "Material",
       "niveis": {
         "verde": {
           "aquecimento": [
-            { "serie": "200m Crawl leve" },
-            { "serie": "100m Pernada c/ nadadeira" }
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ nadadeira"
+            }
           ],
           "principal": [
-            { "serie": "4x100m Crawl c/ Palmar", "detalhes": ["50m forte", "50m moderado"], "intervalo": "30\"" },
-            { "serie": "6x50m Crawl c/ Nadadeira", "detalhes": ["25m máximo", "25m leve"], "intervalo": "30\"" },
-            { "serie": "4x50m Crawl sem material", "intervalo": "40\"" }
+            {
+              "serie": "4x100m Crawl c/ Palmar",
+              "detalhes": [
+                "50m forte",
+                "50m moderado"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "6x50m Crawl c/ Nadadeira",
+              "detalhes": [
+                "25m máximo",
+                "25m leve"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x50m Crawl sem material",
+              "intervalo": "40\""
+            }
           ],
           "final": [
-            { "serie": "200m Costas solto" }
+            {
+              "serie": "200m Costas solto"
+            }
           ]
         },
         "amarelo": {
           "aquecimento": [
-            { "serie": "300m Crawl solto" },
-            { "serie": "200m Pernada c/ prancha e nadadeira" }
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "200m Pernada c/ prancha e nadadeira"
+            }
           ],
           "principal": [
-            { "serie": "4x150m Crawl c/ Palmar e Pull buoy", "detalhes": ["Braçada longa, sem pernada"], "intervalo": "35\"" },
-            { "serie": "6x75m Crawl c/ Nadadeira", "detalhes": ["25m pernada forte", "50m nado completo"], "intervalo": "30\"" },
-            { "serie": "5x100m Crawl sem material", "detalhes": ["Comparar a sensação com o de palmar"], "intervalo": "35\"" }
+            {
+              "serie": "4x150m Crawl c/ Palmar e Pull buoy",
+              "detalhes": [
+                "Braçada longa, sem pernada"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "6x75m Crawl c/ Nadadeira",
+              "detalhes": [
+                "25m pernada forte",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "5x100m Crawl sem material",
+              "detalhes": [
+                "Comparar a sensação com o de palmar"
+              ],
+              "intervalo": "35\""
+            }
           ],
           "final": [
-            { "serie": "150m Peito solto" }
+            {
+              "serie": "150m Peito solto"
+            }
           ]
         },
         "vermelho": {
           "aquecimento": [
-            { "serie": "400m Crawl leve" },
-            { "serie": "6x50m Pernada c/ nadadeira de lado", "intervalo": "25\"" },
-            { "serie": "200m Sculling c/ pull buoy" }
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "6x50m Pernada c/ nadadeira de lado",
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Sculling c/ pull buoy"
+            }
           ],
           "principal": [
-            { "serie": "6x100m EDUCATIVO c/ Palmar", "detalhes": ["50m braço único", "50m nado completo"], "intervalo": "35\"" },
-            { "serie": "3x200m Crawl c/ Pull buoy", "detalhes": ["Ritmo firme, quadril alto"], "intervalo": "40\"" },
-            { "serie": "10x50m Crawl c/ Nadadeira", "detalhes": ["25m velocidade máxima", "25m recuperação"], "intervalo": "30\"" },
-            { "serie": "4x125m Crawl sem material", "detalhes": ["Manter a braçada que o material ensinou"], "intervalo": "35\"" }
+            {
+              "serie": "6x100m EDUCATIVO c/ Palmar",
+              "detalhes": [
+                "50m braço único",
+                "50m nado completo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "3x200m Crawl c/ Pull buoy",
+              "detalhes": [
+                "Ritmo firme, quadril alto"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "10x50m Crawl c/ Nadadeira",
+              "detalhes": [
+                "25m velocidade máxima",
+                "25m recuperação"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x125m Crawl sem material",
+              "detalhes": [
+                "Manter a braçada que o material ensinou"
+              ],
+              "intervalo": "35\""
+            }
           ],
           "final": [
-            { "serie": "250m Costas contínuo" },
-            { "serie": "150m Crawl bem leve" }
+            {
+              "serie": "250m Costas contínuo"
+            },
+            {
+              "serie": "150m Crawl bem leve"
+            }
           ]
         }
       }
     },
-
     {
-      "dia": 7, "semana": 1, "bloco": "Base", "foco": "Regenerativo",
+      "dia": 7,
+      "semana": 1,
+      "bloco": "Base",
+      "foco": "Regenerativo",
       "niveis": {
         "verde": {
           "aquecimento": [
-            { "serie": "200m Crawl bem leve" }
+            {
+              "serie": "200m Crawl bem leve"
+            }
           ],
           "principal": [
-            { "serie": "6x50m alternando Crawl / Costas", "detalhes": ["Respiração longa"], "intervalo": "30\"" },
-            { "serie": "300m Crawl contínuo", "detalhes": ["Ritmo de conversa"] }
+            {
+              "serie": "6x50m alternando Crawl / Costas",
+              "detalhes": [
+                "Respiração longa"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "300m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa"
+              ]
+            }
           ],
           "final": [
-            { "serie": "100m Sculling" },
-            { "serie": "100m Peito solto" }
+            {
+              "serie": "100m Sculling"
+            },
+            {
+              "serie": "100m Peito solto"
+            }
           ]
         },
         "amarelo": {
           "aquecimento": [
-            { "serie": "300m Costas leve" }
+            {
+              "serie": "300m Costas leve"
+            }
           ],
           "principal": [
-            { "serie": "400m Crawl contínuo", "detalhes": ["Sem olhar o relógio"] },
-            { "serie": "8x75m", "detalhes": ["25m Peito", "50m Crawl leve"], "intervalo": "30\"" },
-            { "serie": "4x75m Costas", "detalhes": ["Braçada longa, ombro relaxado"], "intervalo": "30\"" }
+            {
+              "serie": "400m Crawl contínuo",
+              "detalhes": [
+                "Sem olhar o relógio"
+              ]
+            },
+            {
+              "serie": "8x75m",
+              "detalhes": [
+                "25m Peito",
+                "50m Crawl leve"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x75m Costas",
+              "detalhes": [
+                "Braçada longa, ombro relaxado"
+              ],
+              "intervalo": "30\""
+            }
           ],
           "final": [
-            { "serie": "200m Pernada suave c/ prancha" }
+            {
+              "serie": "200m Pernada suave c/ prancha"
+            }
           ]
         },
         "vermelho": {
           "aquecimento": [
-            { "serie": "400m Crawl alternando com Costas" },
-            { "serie": "150m Pernada leve de lado" }
+            {
+              "serie": "400m Crawl alternando com Costas"
+            },
+            {
+              "serie": "150m Pernada leve de lado"
+            }
           ],
           "principal": [
-            { "serie": "6x100m EDUCATIVO", "detalhes": ["50m deslize longo, contando braçadas", "50m nado completo"], "intervalo": "35\"" },
-            { "serie": "600m Crawl contínuo", "detalhes": ["Ritmo de conversa do começo ao fim"] },
-            { "serie": "5x100m Costas", "detalhes": ["Braçada longa, sem pressa"], "intervalo": "30\"" }
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m deslize longo, contando braçadas",
+                "50m nado completo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "600m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa do começo ao fim"
+              ]
+            },
+            {
+              "serie": "5x100m Costas",
+              "detalhes": [
+                "Braçada longa, sem pressa"
+              ],
+              "intervalo": "30\""
+            }
           ],
           "final": [
-            { "serie": "250m Sculling e nado solto" },
-            { "serie": "100m Peito bem leve" }
+            {
+              "serie": "250m Sculling e nado solto"
+            },
+            {
+              "serie": "100m Peito bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 8,
+      "semana": 2,
+      "bloco": "Construção",
+      "foco": "Técnica",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "4x25m Sculling vertical",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "25m cotovelo alto",
+                "25m nado completo"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "5x100m Crawl",
+              "detalhes": [
+                "50m contando braçadas",
+                "50m ritmo normal"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Peito leve"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Costas leve"
+            },
+            {
+              "serie": "6x50m Crawl c/ Nadadeira",
+              "intervalo": "20\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x75m Crawl",
+              "detalhes": [
+                "25m mão em concha",
+                "25m punho fechado",
+                "25m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x150m Crawl",
+              "detalhes": [
+                "50m técnica",
+                "100m ritmo firme"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Crawl solto"
+            },
+            {
+              "serie": "100m Sculling"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "500m Crawl",
+              "detalhes": [
+                "Alternando 50m nado / 50m pernada"
+              ]
+            },
+            {
+              "serie": "200m Sculling de deslocamento"
+            },
+            {
+              "serie": "4x75m Crawl progressivo",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "10x50m EDUCATIVO",
+              "detalhes": [
+                "25m entrada de mão exagerada",
+                "25m nado completo"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "6x200m Crawl",
+              "detalhes": [
+                "50m técnica",
+                "150m ritmo de prova"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x100m Crawl c/ Pull buoy",
+              "detalhes": [
+                "Quadril alto"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "250m Costas contínuo"
+            },
+            {
+              "serie": "150m Peito solto"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 9,
+      "semana": 2,
+      "bloco": "Construção",
+      "foco": "Aeróbico",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada de lado"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "4x200m Crawl",
+              "detalhes": [
+                "Mesmo ritmo nos quatro"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "4x50m Crawl forte",
+              "intervalo": "25\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl",
+              "detalhes": [
+                "Alternando 100m leve / 100m firme"
+              ]
+            },
+            {
+              "serie": "4x50m Pernada c/ prancha",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "2x500m Crawl",
+              "detalhes": [
+                "Ritmo constante"
+              ],
+              "intervalo": "50\""
+            },
+            {
+              "serie": "8x75m Crawl progressivo",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Peito solto"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl solto"
+            },
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "Respiração de 5"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x100m EDUCATIVO",
+              "detalhes": [
+                "50m nado de cabeça baixa",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "2x600m Crawl",
+              "detalhes": [
+                "Ritmo de prova longa"
+              ],
+              "intervalo": "60\""
+            },
+            {
+              "serie": "4x150m Crawl forte",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas contínuo"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 10,
+      "semana": 2,
+      "bloco": "Construção",
+      "foco": "Velocidade",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "4x50m progressivo",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x25m Crawl máximo",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "25m tiro",
+                "25m solto"
+              ],
+              "intervalo": "45\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "6x50m Pernada forte c/ prancha",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "12x50m Crawl",
+              "detalhes": [
+                "25m máximo",
+                "25m recuperação"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x100m Crawl ritmo de prova",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito leve"
+            },
+            {
+              "serie": "100m Sculling"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl alternando ritmos"
+            },
+            {
+              "serie": "8x25m Saída forte da borda",
+              "intervalo": "30\""
+            },
+            {
+              "serie": "200m Sculling frontal"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "25m frequência máxima de braço",
+                "25m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "16x25m Crawl",
+              "detalhes": [
+                "Saída da borda, velocidade máxima"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x150m Crawl",
+              "detalhes": [
+                "50m forte",
+                "50m solto",
+                "50m máximo"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "4x100m Crawl c/ Nadadeira",
+              "detalhes": [
+                "Velocidade com apoio longo"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "300m Costas contínuo"
+            },
+            {
+              "serie": "200m Crawl bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 11,
+      "semana": 2,
+      "bloco": "Construção",
+      "foco": "Estilos",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl"
+            },
+            {
+              "serie": "200m Costas"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "5x100m Medley",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "4x75m",
+              "detalhes": [
+                "25m Peito",
+                "50m Crawl"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Medley contínuo"
+            },
+            {
+              "serie": "4x50m Pernada de costas",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m",
+              "detalhes": [
+                "50m Borboleta",
+                "50m Crawl"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x150m Medley sem Borboleta",
+              "detalhes": [
+                "50m Costas",
+                "50m Peito",
+                "50m Crawl"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "6x50m Peito técnico",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Crawl solto"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "4x100m",
+              "detalhes": [
+                "25m de cada estilo"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "200m Pernada borboleta c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "Timing da pernada em cada estilo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "5x200m Medley",
+              "intervalo": "50\""
+            },
+            {
+              "serie": "6x100m Costas forte",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "300m Peito leve"
+            },
+            {
+              "serie": "200m Crawl leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 12,
+      "semana": 2,
+      "bloco": "Construção",
+      "foco": "Volume",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "3x300m Crawl",
+              "detalhes": [
+                "Ritmo sustentável"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "3x100m Crawl forte",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Costas leve"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl progressivo"
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "1000m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de treino longo"
+              ]
+            },
+            {
+              "serie": "4x200m Crawl",
+              "detalhes": [
+                "Ritmo firme"
+              ],
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            },
+            {
+              "serie": "100m Sculling leve"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "500m Crawl alternando com Costas"
+            },
+            {
+              "serie": "6x50m Crawl c/ Pull buoy",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m deslize máximo",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "1500m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de prova longa"
+              ]
+            },
+            {
+              "serie": "4x150m Crawl forte",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "300m Costas contínuo"
+            },
+            {
+              "serie": "200m Peito solto"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 13,
+      "semana": 2,
+      "bloco": "Construção",
+      "foco": "Material",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "5x100m Crawl c/ Palmar",
+              "intervalo": "30\""
+            },
+            {
+              "serie": "8x50m Crawl c/ Nadadeira",
+              "detalhes": [
+                "25m forte",
+                "25m leve"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "4x75m Pernada c/ prancha",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x150m Crawl c/ Pull buoy",
+              "intervalo": "35\""
+            },
+            {
+              "serie": "8x75m Crawl c/ Palmar",
+              "detalhes": [
+                "25m leve",
+                "50m forte"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Crawl sem material"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "6x50m Pernada de lado c/ nadadeira",
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Sculling c/ Palmar"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x100m EDUCATIVO c/ Nadadeira",
+              "detalhes": [
+                "50m braço único",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x250m Crawl c/ Palmar e Pull buoy",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "10x50m Crawl c/ Nadadeira máximo",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "250m Costas contínuo"
+            },
+            {
+              "serie": "150m Crawl bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 14,
+      "semana": 2,
+      "bloco": "Construção",
+      "foco": "Regenerativo",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl bem leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "400m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa"
+              ]
+            },
+            {
+              "serie": "4x50m Costas solto",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "150m Sculling"
+            },
+            {
+              "serie": "150m Peito leve"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Costas leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "500m Crawl contínuo",
+              "detalhes": [
+                "Sem olhar o relógio"
+              ]
+            },
+            {
+              "serie": "8x75m",
+              "detalhes": [
+                "25m Peito",
+                "50m Crawl leve"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Pernada suave c/ nadadeira"
+            },
+            {
+              "serie": "200m Sculling longo"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl alternando 100m com Peito"
+            },
+            {
+              "serie": "200m Pernada leve c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m contando braçadas",
+                "50m nado completo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "700m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa"
+              ]
+            },
+            {
+              "serie": "4x100m Costas",
+              "detalhes": [
+                "Ombro solto"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "250m Sculling e nado leve"
+            },
+            {
+              "serie": "150m Peito bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 15,
+      "semana": 3,
+      "bloco": "Pico",
+      "foco": "Técnica",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "4x25m Sculling frontal",
+              "intervalo": "20\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m Crawl",
+              "detalhes": [
+                "25m braço único",
+                "25m nado completo"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "4x100m Crawl",
+              "detalhes": [
+                "50m deslize longo",
+                "50m ritmo"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl progressivo"
+            },
+            {
+              "serie": "4x50m Sculling médio",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m Crawl",
+              "detalhes": [
+                "50m técnica exagerada",
+                "50m ritmo de prova"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x200m Crawl",
+              "detalhes": [
+                "Contando braçadas, manter o número"
+              ],
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito técnico"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "500m Crawl",
+              "detalhes": [
+                "Alternando 100m nado / 100m pernada"
+              ]
+            },
+            {
+              "serie": "300m Sculling em três posições"
+            },
+            {
+              "serie": "4x50m Crawl progressivo",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "12x50m EDUCATIVO",
+              "detalhes": [
+                "Alterna ponta do dedo, cotovelo alto,",
+                "rolamento e nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "5x200m Crawl",
+              "detalhes": [
+                "50m técnica",
+                "150m firme"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "6x100m Crawl c/ Palmar",
+              "detalhes": [
+                "Apoio longo"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "250m Costas contínuo"
+            },
+            {
+              "serie": "150m Crawl solto"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 16,
+      "semana": 3,
+      "bloco": "Pico",
+      "foco": "Aeróbico",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "5x200m Crawl",
+              "detalhes": [
+                "Ritmo constante"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl solto"
+            },
+            {
+              "serie": "4x50m Pernada de lado",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "3x400m Crawl",
+              "detalhes": [
+                "Ritmo sustentável"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "5x100m Crawl forte",
+              "intervalo": "25\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Peito leve"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "500m Crawl leve"
+            },
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "Respiração bilateral"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x100m EDUCATIVO",
+              "detalhes": [
+                "50m nado sem tirar a cabeça",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "800m Crawl contínuo",
+              "detalhes": [
+                "Ritmo firme"
+              ]
+            },
+            {
+              "serie": "4x300m Crawl progressivo",
+              "intervalo": "45\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Costas leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 17,
+      "semana": 3,
+      "bloco": "Pico",
+      "foco": "Velocidade",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "4x50m progressivo",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x25m Crawl máximo",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "4x50m Crawl",
+              "detalhes": [
+                "15m explosão",
+                "35m controlado"
+              ],
+              "intervalo": "50\""
+            },
+            {
+              "serie": "2x100m Crawl ritmo de prova",
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas regenerativo"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "6x50m Pernada forte c/ nadadeira",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "12x50m Crawl",
+              "detalhes": [
+                "25m máximo",
+                "25m recuperação ativa"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "5x100m Crawl forte",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito solto"
+            },
+            {
+              "serie": "100m Sculling leve"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl alternando ritmos"
+            },
+            {
+              "serie": "8x25m Saída submersa forte",
+              "intervalo": "30\""
+            },
+            {
+              "serie": "200m Sculling frontal"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "25m frequência alta de braçada",
+                "25m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "16x25m Crawl máximo",
+              "detalhes": [
+                "Saída de 40 segundos"
+              ]
+            },
+            {
+              "serie": "6x150m Crawl",
+              "detalhes": [
+                "50m máximo",
+                "100m sustentado"
+              ],
+              "intervalo": "45\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "400m Costas contínuo"
+            },
+            {
+              "serie": "300m Crawl bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 18,
+      "semana": 3,
+      "bloco": "Pico",
+      "foco": "Estilos",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "100m Crawl"
+            },
+            {
+              "serie": "100m Costas"
+            },
+            {
+              "serie": "100m Peito"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "4x100m Medley",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "8x50m",
+              "detalhes": [
+                "25m Borboleta",
+                "25m Crawl"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "400m Crawl solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Medley contínuo"
+            },
+            {
+              "serie": "4x50m Pernada borboleta c/ nadadeira",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x150m",
+              "detalhes": [
+                "50m Borboleta",
+                "50m Costas",
+                "50m Peito"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "6x100m Costas forte",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito leve"
+            },
+            {
+              "serie": "100m Crawl solto"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "4x100m",
+              "detalhes": [
+                "25m de cada estilo"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "200m Pernada alternando os 4 estilos"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "Entrada de mão e cotovelo alto por estilo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "5x200m Medley",
+              "intervalo": "50\""
+            },
+            {
+              "serie": "6x100m",
+              "detalhes": [
+                "50m Peito",
+                "50m Crawl"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "4x100m Borboleta c/ nadadeira",
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "300m Costas contínuo"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 19,
+      "semana": 3,
+      "bloco": "Pico",
+      "foco": "Volume",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "2x400m Crawl",
+              "detalhes": [
+                "Ritmo sustentável"
+              ],
+              "intervalo": "50\""
+            },
+            {
+              "serie": "4x100m Crawl forte",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Costas leve"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl progressivo"
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "1200m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de prova longa"
+              ]
+            },
+            {
+              "serie": "4x150m Crawl forte",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            },
+            {
+              "serie": "100m Sculling"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "500m Crawl alternando com Costas"
+            },
+            {
+              "serie": "6x50m Crawl c/ Palmar",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m punho fechado",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "1600m Crawl contínuo",
+              "detalhes": [
+                "Sem parar"
+              ]
+            },
+            {
+              "serie": "4x200m Crawl progressivo",
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas contínuo"
+            },
+            {
+              "serie": "100m Peito bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 20,
+      "semana": 3,
+      "bloco": "Pico",
+      "foco": "Material",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m Crawl c/ Palmar",
+              "detalhes": [
+                "50m forte",
+                "50m moderado"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "8x50m Crawl c/ Nadadeira",
+              "detalhes": [
+                "25m máximo",
+                "25m leve"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl solto"
+            },
+            {
+              "serie": "200m Pernada c/ prancha e nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x200m Crawl c/ Pull buoy",
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x100m Crawl sem material",
+              "detalhes": [
+                "Comparar a sensação"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito solto"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "6x50m Pernada de lado c/ nadadeira",
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Sculling c/ Pull buoy"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x100m EDUCATIVO c/ Palmar",
+              "detalhes": [
+                "50m braço único",
+                "50m nado completo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "4x250m Crawl c/ Palmar e Pull buoy",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "12x50m Crawl c/ Nadadeira",
+              "detalhes": [
+                "25m máximo",
+                "25m recuperação"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x100m Crawl sem material, ritmo de prova",
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Crawl bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 21,
+      "semana": 3,
+      "bloco": "Pico",
+      "foco": "Regenerativo",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl bem leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "300m Crawl contínuo",
+              "detalhes": [
+                "Respiração longa"
+              ]
+            },
+            {
+              "serie": "6x50m alternando Crawl / Costas",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Sculling"
+            },
+            {
+              "serie": "100m Peito solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Costas leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "600m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa"
+              ]
+            },
+            {
+              "serie": "4x100m",
+              "detalhes": [
+                "50m Peito",
+                "50m Crawl"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Pernada suave c/ prancha"
+            },
+            {
+              "serie": "200m Sculling longo"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl alternando com Peito"
+            },
+            {
+              "serie": "200m Pernada leve de lado"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x100m EDUCATIVO",
+              "detalhes": [
+                "50m deslize contando braçadas",
+                "50m nado completo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "700m Crawl contínuo",
+              "detalhes": [
+                "Sem olhar o relógio"
+              ]
+            },
+            {
+              "serie": "4x100m Costas",
+              "detalhes": [
+                "Braçada longa"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Sculling e nado solto"
+            },
+            {
+              "serie": "100m Peito bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 22,
+      "semana": 4,
+      "bloco": "Regeneração",
+      "foco": "Técnica",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x25m Sculling frontal",
+              "intervalo": "20\""
+            },
+            {
+              "serie": "4x100m Crawl",
+              "detalhes": [
+                "Técnica limpa, contando braçadas"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl progressivo"
+            },
+            {
+              "serie": "100m Pernada de lado"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x50m Crawl",
+              "detalhes": [
+                "25m cotovelo alto",
+                "25m nado completo"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "5x100m Crawl",
+              "detalhes": [
+                "50m devagar",
+                "50m ritmo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x100m Crawl c/ Palmar",
+              "detalhes": [
+                "Apoio longo"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito técnico"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl alternando nado e pernada"
+            },
+            {
+              "serie": "200m Sculling médio"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "10x50m EDUCATIVO",
+              "detalhes": [
+                "Alterna ponta do dedo, braço único",
+                "e nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x200m Crawl",
+              "detalhes": [
+                "50m técnica",
+                "150m ritmo"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x150m Crawl c/ Pull buoy",
+              "detalhes": [
+                "Quadril alto"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas contínuo"
+            },
+            {
+              "serie": "100m Crawl solto"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 23,
+      "semana": 4,
+      "bloco": "Regeneração",
+      "foco": "Aeróbico",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "3x200m Crawl",
+              "detalhes": [
+                "Ritmo moderado"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x50m Crawl progressivo",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Peito leve"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl solto"
+            },
+            {
+              "serie": "100m Pernada c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "2x400m Crawl",
+              "detalhes": [
+                "Ritmo constante"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "4x100m Crawl firme",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "4x50m Crawl",
+              "detalhes": [
+                "Respiração de 5"
+              ],
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m rolamento exagerado",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "800m Crawl contínuo",
+              "detalhes": [
+                "Ritmo confortável"
+              ]
+            },
+            {
+              "serie": "4x150m Crawl progressivo",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito solto"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 24,
+      "semana": 4,
+      "bloco": "Regeneração",
+      "foco": "Velocidade",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "4x25m progressivo",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x25m Crawl máximo",
+              "detalhes": [
+                "Saída de 60 segundos"
+              ]
+            },
+            {
+              "serie": "4x50m Crawl",
+              "detalhes": [
+                "25m forte",
+                "25m leve"
+              ],
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "300m Costas regenerativo"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "4x50m Pernada forte c/ prancha",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m Crawl",
+              "detalhes": [
+                "25m máximo",
+                "25m recuperação"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x100m Crawl ritmo de prova",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito leve"
+            },
+            {
+              "serie": "200m Sculling"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl alternando ritmos"
+            },
+            {
+              "serie": "8x25m Saída forte da borda",
+              "intervalo": "30\""
+            },
+            {
+              "serie": "200m Sculling frontal"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "25m frequência alta",
+                "25m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "12x25m Crawl máximo",
+              "detalhes": [
+                "Saída de 45 segundos"
+              ]
+            },
+            {
+              "serie": "4x150m Crawl",
+              "detalhes": [
+                "50m forte",
+                "100m solto"
+              ],
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "300m Costas contínuo"
+            },
+            {
+              "serie": "200m Crawl bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 25,
+      "semana": 4,
+      "bloco": "Regeneração",
+      "foco": "Estilos",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "100m Crawl"
+            },
+            {
+              "serie": "100m Costas"
+            },
+            {
+              "serie": "100m Peito"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "4x100m Medley leve",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "4x50m",
+              "detalhes": [
+                "25m Borboleta c/ nadadeira",
+                "25m Crawl"
+              ],
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Crawl solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "200m Medley contínuo"
+            },
+            {
+              "serie": "4x50m Pernada de costas",
+              "intervalo": "30\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m",
+              "detalhes": [
+                "50m Costas",
+                "50m Crawl"
+              ],
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x150m Medley sem Borboleta",
+              "detalhes": [
+                "50m Costas",
+                "50m Peito",
+                "50m Crawl"
+              ],
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito leve"
+            },
+            {
+              "serie": "100m Sculling leve"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "4x100m",
+              "detalhes": [
+                "25m de cada estilo"
+              ],
+              "intervalo": "40\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "8x50m EDUCATIVO",
+              "detalhes": [
+                "Timing de pernada por estilo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "4x200m Medley",
+              "intervalo": "50\""
+            },
+            {
+              "serie": "6x100m Costas moderado",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "100m Peito bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 26,
+      "semana": 4,
+      "bloco": "Regeneração",
+      "foco": "Volume",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "2x300m Crawl",
+              "detalhes": [
+                "Ritmo confortável"
+              ],
+              "intervalo": "45\""
+            },
+            {
+              "serie": "3x100m Crawl moderado",
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Costas leve"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl progressivo"
+            },
+            {
+              "serie": "200m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "800m Crawl contínuo",
+              "detalhes": [
+                "Sem forçar"
+              ]
+            },
+            {
+              "serie": "4x150m Crawl firme",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "500m Crawl alternando com Costas"
+            },
+            {
+              "serie": "4x50m Crawl c/ Pull buoy",
+              "intervalo": "25\""
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m deslize longo",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "1000m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa"
+              ]
+            },
+            {
+              "serie": "4x200m Crawl moderado",
+              "intervalo": "40\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito solto"
+            },
+            {
+              "serie": "100m Sculling"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 27,
+      "semana": 4,
+      "bloco": "Regeneração",
+      "foco": "Material",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl leve"
+            },
+            {
+              "serie": "100m Pernada c/ nadadeira"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "4x100m Crawl c/ Palmar moderado",
+              "intervalo": "35\""
+            },
+            {
+              "serie": "6x50m Crawl c/ Nadadeira",
+              "detalhes": [
+                "Leve e longo"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Costas solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Crawl solto"
+            },
+            {
+              "serie": "200m Pernada c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "4x200m Crawl c/ Pull buoy",
+              "intervalo": "40\""
+            },
+            {
+              "serie": "4x100m Crawl sem material",
+              "intervalo": "35\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Peito leve"
+            },
+            {
+              "serie": "100m Sculling leve"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl leve"
+            },
+            {
+              "serie": "4x50m Pernada de lado c/ nadadeira",
+              "intervalo": "25\""
+            },
+            {
+              "serie": "200m Sculling c/ Palmar"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m EDUCATIVO c/ Nadadeira",
+              "detalhes": [
+                "50m braço único",
+                "50m nado completo"
+              ],
+              "intervalo": "30\""
+            },
+            {
+              "serie": "4x250m Crawl c/ Palmar",
+              "intervalo": "45\""
+            },
+            {
+              "serie": "8x50m Crawl c/ Nadadeira",
+              "detalhes": [
+                "25m máximo",
+                "25m recuperação"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "250m Costas contínuo"
+            },
+            {
+              "serie": "150m Crawl bem leve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "dia": 28,
+      "semana": 4,
+      "bloco": "Regeneração",
+      "foco": "Regenerativo",
+      "niveis": {
+        "verde": {
+          "aquecimento": [
+            {
+              "serie": "200m Crawl bem leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m alternando Crawl / Costas",
+              "detalhes": [
+                "Ritmo de conversa"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "100m Sculling"
+            },
+            {
+              "serie": "100m Peito solto"
+            }
+          ]
+        },
+        "amarelo": {
+          "aquecimento": [
+            {
+              "serie": "300m Costas leve"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "500m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa"
+              ]
+            },
+            {
+              "serie": "8x75m",
+              "detalhes": [
+                "25m Peito",
+                "50m Crawl leve"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Pernada suave c/ nadadeira"
+            },
+            {
+              "serie": "100m Sculling longo"
+            }
+          ]
+        },
+        "vermelho": {
+          "aquecimento": [
+            {
+              "serie": "400m Crawl alternando com Peito"
+            },
+            {
+              "serie": "200m Pernada leve c/ prancha"
+            }
+          ],
+          "principal": [
+            {
+              "serie": "6x100m EDUCATIVO",
+              "detalhes": [
+                "50m contando braçadas",
+                "50m nado completo"
+              ],
+              "intervalo": "35\""
+            },
+            {
+              "serie": "600m Crawl contínuo",
+              "detalhes": [
+                "Ritmo de conversa"
+              ]
+            },
+            {
+              "serie": "4x100m Costas",
+              "detalhes": [
+                "Ombro relaxado"
+              ],
+              "intervalo": "30\""
+            }
+          ],
+          "final": [
+            {
+              "serie": "200m Sculling e nado leve"
+            },
+            {
+              "serie": "100m Peito bem leve"
+            }
           ]
         }
       }
