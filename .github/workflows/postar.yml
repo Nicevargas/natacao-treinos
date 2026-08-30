@@ -1,6 +1,15 @@
 name: Publicar treino do dia
 
 on:
+  # Gatilho principal: o n8n chama a API de dispatches às 06:00 de Brasília.
+  # Disparo por API roda na hora -- não passa pela fila do `schedule`, que em
+  # 30/08 atrasou cinco horas (disparou 11:24 em vez de 06:13).
+  repository_dispatch:
+    types: [publicar-treino]
+
+  # Rede de segurança, para o caso de o n8n estar fora do ar. Sai atrasado,
+  # mas sai. Se o n8n já publicou, estas execuções veem o carrossel do dia na
+  # conta e saem sem fazer nada.
   schedule:
     # Horários em UTC; Brasília é UTC-3 e não tem mais horário de verão, então
     # isto vale o ano inteiro.
