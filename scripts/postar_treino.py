@@ -61,6 +61,10 @@ SOBRE_O_BLOCO = {
     "Regeneração": "Semana 4 do ciclo — bloco de Regeneração, absorver o que foi feito.",
 }
 
+# Frase fixa da legenda, usada para reconhecer um post nosso no meio do feed.
+# Se ela mudar em montar_legenda(), tem que mudar aqui junto.
+ASSINATURA = "Cada Dia, 1 Treino não queremos apenas somar metros"
+
 TAGS = ("#NatacaoCriativa #CadaDia1Treino #TreinoDeNatacao #Natacao "
         "#SwimmingWorkout #Nadar #Piscina #Swim #NatacaoMaster #AguasAbertas")
 
@@ -117,6 +121,15 @@ def publicado_na_conta(quando: date) -> str | None:
     seguinte republicar o mesmo carrossel. O feed é a fonte de verdade e não
     depende do git ter dado certo.
 
+    Procura o NOSSO carrossel, não qualquer post do dia. A conta publica reels
+    e outros conteúdos todos os dias; a primeira versão disto só comparava a
+    data e por isso deu falso positivo em 30/08, casando com um reel e fazendo
+    as duas execuções agendadas saírem sem publicar, relatando sucesso.
+
+    A identificação usa duas marcas juntas: a frase fixa da nossa legenda e a
+    linha de dia/data daquele dia específico. Uma só não bastaria -- a frase se
+    repete todo dia, e a data aparece em qualquer post da mesma data.
+
     Falha de rede aqui devolve None (segue para o registro local) em vez de
     abortar: barrar a publicação por causa de uma consulta instável seria pior
     que o risco que ela cobre.
@@ -128,9 +141,11 @@ def publicado_na_conta(quando: date) -> str | None:
     base = os.getenv("INSTAGRAM_API_BASE", "https://graph.instagram.com")
     versao = os.getenv("META_API_VERSION", "v23.0")
     try:
+        # Limite folgado: a conta chega a publicar 4 vezes por dia, então 10
+        # itens podem não alcançar o carrossel da manhã.
         r = requests.get(f"{base}/{versao}/me/media",
-                         params={"fields": "id,timestamp,permalink",
-                                 "limit": 10, "access_token": token},
+                         params={"fields": "id,timestamp,permalink,caption",
+                                 "limit": 30, "access_token": token},
                          timeout=30)
         itens = r.json().get("data") or []
     except Exception as e:
@@ -138,16 +153,13 @@ def publicado_na_conta(quando: date) -> str | None:
               f"seguindo pelo registro local)")
         return None
 
+    marca_do_dia = f"{gerar_card.DIAS_SEMANA[quando.weekday()]}, {quando:%d/%m}"
+
     for item in itens:
-        carimbo = item.get("timestamp", "")
-        try:
-            # A Meta devolve com fuso; converter para Brasília antes de comparar,
-            # senão um post das 21h vira o dia seguinte.
-            quando_saiu = datetime.fromisoformat(carimbo).astimezone(BRASILIA).date()
-        except ValueError:
+        legenda = item.get("caption") or ""
+        if ASSINATURA not in legenda or marca_do_dia not in legenda:
             continue
-        if quando_saiu == quando:
-            return item.get("permalink") or item.get("id")
+        return item.get("permalink") or item.get("id")
     return None
 
 
