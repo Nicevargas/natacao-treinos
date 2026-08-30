@@ -10,5 +10,17 @@
       "2026-08-29_4-vermelho.jpg",
       "2026-08-29_5-glossario.jpg"
     ]
+  },
+  "2026-08-30": {
+    "dia_do_ciclo": 7,
+    "bloco": "Base",
+    "foco": "Regenerativo",
+    "slides": [
+      "2026-08-30_1-capa.jpg",
+      "2026-08-30_2-verde.jpg",
+      "2026-08-30_3-amarelo.jpg",
+      "2026-08-30_4-vermelho.jpg",
+      "2026-08-30_5-glossario.jpg"
+    ]
   }
 }
