@@ -52,6 +52,22 @@ n8n → Import from File → `disparo-diario.json`.
 Abra o nó **Disparar o GitHub Actions** e selecione a credencial criada acima.
 Depois ative o fluxo.
 
+### 3b. Conferir o fuso — o n8n ignora o do arquivo
+
+O JSON traz `settings.timezone: America/Sao_Paulo`, **mas o n8n descarta isso na
+importação** e aplica o fuso padrão da instância. Nesta instância o padrão é
+`America/New_York`, então o gatilho de 06:00 dispara às 07:00 de Brasília.
+
+Isso ainda cabe na janela até as 8h, mas quebra em novembro: quando os EUA
+saem do horário de verão, `America/New_York` vira UTC-5 e as 06:00 de lá
+passam a ser **08:00 aqui** — em cima do limite.
+
+Corrigir em: menu `...` do fluxo → **Settings** → **Timezone** →
+`America/Sao_Paulo` → Save.
+
+Para conferir depois: abra o nó do gatilho, execute, e olhe o campo `Timezone`
+na saída. Tem que dizer `America/Sao_Paulo (UTC-03:00)`.
+
 ### 4. Testar
 
 Clique em **Execute Workflow**. O esperado é o nó verde e a mensagem
