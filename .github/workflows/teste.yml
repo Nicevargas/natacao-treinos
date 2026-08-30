@@ -52,3 +52,5 @@ jobs:
           name: slides-teste
           path: cards/
           retention-days: 7
+
+# ciclo completo: 84 treinos
