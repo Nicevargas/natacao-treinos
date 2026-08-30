@@ -6,6 +6,12 @@ on:
   schedule:
     - cron: "0 12 * * 1"
   workflow_dispatch:
+  # O diálogo de "Run workflow" do GitHub carrega em erro em alguns
+  # navegadores, então tocar neste arquivo também dispara -- é a forma de
+  # testar a renovação sem depender da interface.
+  push:
+    paths:
+      - ".github/workflows/renovar-token.yml"
 
 jobs:
   renovar:
