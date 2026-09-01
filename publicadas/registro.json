@@ -34,5 +34,17 @@
       "2026-08-31_4-vermelho.jpg",
       "2026-08-31_5-glossario.jpg"
     ]
+  },
+  "2026-09-01": {
+    "dia_do_ciclo": 2,
+    "bloco": "Base",
+    "foco": "Aeróbico",
+    "slides": [
+      "2026-09-01_1-capa.jpg",
+      "2026-09-01_2-verde.jpg",
+      "2026-09-01_3-amarelo.jpg",
+      "2026-09-01_4-vermelho.jpg",
+      "2026-09-01_5-glossario.jpg"
+    ]
   }
 }
