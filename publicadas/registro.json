@@ -46,5 +46,17 @@
       "2026-09-01_4-vermelho.jpg",
       "2026-09-01_5-glossario.jpg"
     ]
+  },
+  "2026-09-02": {
+    "dia_do_ciclo": 3,
+    "bloco": "Base",
+    "foco": "Velocidade",
+    "slides": [
+      "2026-09-02_1-capa.jpg",
+      "2026-09-02_2-verde.jpg",
+      "2026-09-02_3-amarelo.jpg",
+      "2026-09-02_4-vermelho.jpg",
+      "2026-09-02_5-glossario.jpg"
+    ]
   }
 }
