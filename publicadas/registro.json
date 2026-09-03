@@ -58,5 +58,17 @@
       "2026-09-02_4-vermelho.jpg",
       "2026-09-02_5-glossario.jpg"
     ]
+  },
+  "2026-09-03": {
+    "dia_do_ciclo": 4,
+    "bloco": "Base",
+    "foco": "Estilos",
+    "slides": [
+      "2026-09-03_1-capa.jpg",
+      "2026-09-03_2-verde.jpg",
+      "2026-09-03_3-amarelo.jpg",
+      "2026-09-03_4-vermelho.jpg",
+      "2026-09-03_5-glossario.jpg"
+    ]
   }
 }
