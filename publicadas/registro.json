@@ -70,5 +70,17 @@
       "2026-09-03_4-vermelho.jpg",
       "2026-09-03_5-glossario.jpg"
     ]
+  },
+  "2026-09-04": {
+    "dia_do_ciclo": 5,
+    "bloco": "Base",
+    "foco": "Volume",
+    "slides": [
+      "2026-09-04_1-capa.jpg",
+      "2026-09-04_2-verde.jpg",
+      "2026-09-04_3-amarelo.jpg",
+      "2026-09-04_4-vermelho.jpg",
+      "2026-09-04_5-glossario.jpg"
+    ]
   }
 }
