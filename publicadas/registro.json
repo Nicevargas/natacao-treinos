@@ -106,5 +106,17 @@
       "2026-09-06_4-vermelho.jpg",
       "2026-09-06_5-glossario.jpg"
     ]
+  },
+  "2026-09-07": {
+    "dia_do_ciclo": 8,
+    "bloco": "Construção",
+    "foco": "Técnica",
+    "slides": [
+      "2026-09-07_1-capa.jpg",
+      "2026-09-07_2-verde.jpg",
+      "2026-09-07_3-amarelo.jpg",
+      "2026-09-07_4-vermelho.jpg",
+      "2026-09-07_5-glossario.jpg"
+    ]
   }
 }
