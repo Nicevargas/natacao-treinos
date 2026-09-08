@@ -118,5 +118,17 @@
       "2026-09-07_4-vermelho.jpg",
       "2026-09-07_5-glossario.jpg"
     ]
+  },
+  "2026-09-08": {
+    "dia_do_ciclo": 9,
+    "bloco": "Construção",
+    "foco": "Aeróbico",
+    "slides": [
+      "2026-09-08_1-capa.jpg",
+      "2026-09-08_2-verde.jpg",
+      "2026-09-08_3-amarelo.jpg",
+      "2026-09-08_4-vermelho.jpg",
+      "2026-09-08_5-glossario.jpg"
+    ]
   }
 }
