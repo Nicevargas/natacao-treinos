@@ -130,5 +130,17 @@
       "2026-09-08_4-vermelho.jpg",
       "2026-09-08_5-glossario.jpg"
     ]
+  },
+  "2026-09-09": {
+    "dia_do_ciclo": 10,
+    "bloco": "Construção",
+    "foco": "Velocidade",
+    "slides": [
+      "2026-09-09_1-capa.jpg",
+      "2026-09-09_2-verde.jpg",
+      "2026-09-09_3-amarelo.jpg",
+      "2026-09-09_4-vermelho.jpg",
+      "2026-09-09_5-glossario.jpg"
+    ]
   }
 }
