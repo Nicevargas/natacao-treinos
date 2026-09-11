@@ -154,5 +154,17 @@
       "2026-09-10_4-vermelho.jpg",
       "2026-09-10_5-glossario.jpg"
     ]
+  },
+  "2026-09-11": {
+    "dia_do_ciclo": 12,
+    "bloco": "Construção",
+    "foco": "Volume",
+    "slides": [
+      "2026-09-11_1-capa.jpg",
+      "2026-09-11_2-verde.jpg",
+      "2026-09-11_3-amarelo.jpg",
+      "2026-09-11_4-vermelho.jpg",
+      "2026-09-11_5-glossario.jpg"
+    ]
   }
 }
