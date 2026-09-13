@@ -178,5 +178,17 @@
       "2026-09-12_4-vermelho.jpg",
       "2026-09-12_5-glossario.jpg"
     ]
+  },
+  "2026-09-13": {
+    "dia_do_ciclo": 14,
+    "bloco": "Construção",
+    "foco": "Regenerativo",
+    "slides": [
+      "2026-09-13_1-capa.jpg",
+      "2026-09-13_2-verde.jpg",
+      "2026-09-13_3-amarelo.jpg",
+      "2026-09-13_4-vermelho.jpg",
+      "2026-09-13_5-glossario.jpg"
+    ]
   }
 }
