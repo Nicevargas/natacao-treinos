@@ -190,5 +190,17 @@
       "2026-09-13_4-vermelho.jpg",
       "2026-09-13_5-glossario.jpg"
     ]
+  },
+  "2026-09-14": {
+    "dia_do_ciclo": 15,
+    "bloco": "Pico",
+    "foco": "Técnica",
+    "slides": [
+      "2026-09-14_1-capa.jpg",
+      "2026-09-14_2-verde.jpg",
+      "2026-09-14_3-amarelo.jpg",
+      "2026-09-14_4-vermelho.jpg",
+      "2026-09-14_5-glossario.jpg"
+    ]
   }
 }
