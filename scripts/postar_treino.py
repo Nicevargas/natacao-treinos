@@ -22,7 +22,9 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import cartao_nc     # noqa: E402
 import gerar_card    # noqa: E402
+import programa_nc   # noqa: E402
 import treino        # noqa: E402
 
 for _s in (sys.stdout, sys.stderr):
@@ -99,6 +101,61 @@ def montar_legenda(t: dict, dados: dict, quando: date) -> str:
     )
 
 
+# Legenda do Método NC (desde 28/09/2026). A frase de ASSINATURA e a linha
+# "Dia, dd/mm" continuam na legenda: é por elas que publicado_na_conta() acha o
+# nosso carrossel no feed.
+SOBRE_O_FOCO_NC = {
+    "Técnica": "Hoje o ganho é de percepção: os corretivos da Preparação voltam ao nado completo no Desenvolvimento.",
+    "Resistência": "Ritmo moderado que daria para sustentar por 20 a 30 minutos. Constância vale mais que velocidade.",
+    "Velocidade": "Acelerações curtas com o corpo descansado, antes da série principal. Qualidade máxima e pausa generosa.",
+    "Estilos": "Costas, peito e borboleta com corretivos. Nadar o que você não gosta costuma destravar o que você gosta.",
+    "Ritmo": "Passagem negativa: começar controlado e terminar mais rápido. É assim que se aprende a dosar o esforço.",
+    "Força específica": "Palmar, pull buoy e nadadeira ensinam sensação. O que importa é o que muda quando você tira o material.",
+    "Recuperação": "Dia leve de propósito. Recuperação faz parte do treino: pular este dia atrapalha a semana seguinte.",
+}
+
+SOBRE_O_MESOCICLO = {
+    "Base": "Semana 1 do ciclo: Base, construindo o alicerce.",
+    "Construção": "Semana 2 do ciclo: Construção, o volume sobe um pouco.",
+    "Pico": "Semana 3 do ciclo: Pico, a semana mais intensa das quatro.",
+    "Regeneração": "Semana 4 do ciclo: Regeneração, menos volume para absorver o que foi feito.",
+}
+
+
+def montar_legenda_nc(t: dict, dados: dict, quando: date) -> str:
+    rot = dados["rotulos"]
+    dia_semana = gerar_card.DIAS_SEMANA[quando.weekday()]
+    # Mesmo objetivo nos três níveis (dia de técnica, por exemplo) sai uma vez só.
+    objetivos = [t["niveis"][n]["objetivo"] for n in programa_nc.NIVEIS]
+    um_so = len(set(objetivos)) == 1
+    niveis = "\n".join(
+        f"{rot[n]['emoji']} {rot[n]['nome']}: {t['niveis'][n]['zona']} · "
+        f"{programa_nc.total_do_nivel(t['niveis'][n])}m · "
+        f"~{programa_nc.minutos(t['niveis'][n], n)} min"
+        + ("" if um_so else f"\n🎯 {t['niveis'][n]['objetivo']}")
+        for n in programa_nc.NIVEIS)
+    if um_so:
+        niveis += f"\n\n🎯 Objetivo do dia: {objetivos[0]}"
+
+    return (
+        f"🏊 Qual é o seu nível hoje?\n\n"
+        f"{dia_semana}, {quando.strftime('%d/%m')} — foco em {t['foco']}. "
+        f"{SOBRE_O_FOCO_NC.get(t['foco'], '')}\n\n"
+        f"No Cada Dia, 1 Treino não queremos apenas somar metros. Cada bloco tem um "
+        f"propósito: Ativação → Preparação → Desenvolvimento → Consolidação → Recuperação.\n\n"
+        f"Escolha seu nível:\n{niveis}\n\n"
+        f"📌 Como ler: A0 a A3, AN e AA são as zonas de intensidade; PSE é o esforço de 0 a 10; "
+        f"#20\" é descanso de 20 s e @ é saída com tempo fixo.\n\n"
+        f"{SOBRE_O_MESOCICLO.get(t['mesociclo'], '')}\n\n"
+        f"⚠️ Sentiu dor, tontura ou falta de ar incomum? Pare o treino.\n\n"
+        f"🔥 Fez o treino? Marca {dados['handle']} e conta:\n"
+        f"Intensidade: 0 a 10\n"
+        f"Complexidade: 0 a 10\n\n"
+        f"👇 Sua percepção nos comentários ajuda a montar os próximos.\n\n"
+        f"{TAGS}"
+    )
+
+
 # ----------------------------------------------------------------- registro
 
 def ja_publicado(quando: date):
@@ -167,7 +224,7 @@ def anotar(quando: date, t: dict, arquivos: list) -> None:
     REGISTRO.parent.mkdir(exist_ok=True)
     dados = json.loads(REGISTRO.read_text(encoding="utf-8")) if REGISTRO.exists() else {}
     dados[quando.isoformat()] = {
-        "dia_do_ciclo": t["dia"], "bloco": t["bloco"], "foco": t["foco"],
+        "dia_do_ciclo": t["dia"], "bloco": t.get("mesociclo", t.get("bloco")), "foco": t["foco"],
         "slides": [a.name for a in arquivos],
     }
     REGISTRO.write_text(json.dumps(dados, ensure_ascii=False, indent=2) + "\n",
@@ -185,17 +242,20 @@ def main() -> int:
     args = ap.parse_args()
 
     quando = date.fromisoformat(args.data) if args.data else date.today()
-    dados = treino.carregar()
+    # Até 27/09/2026 sai treinos.json; da âncora de programa_nc.json em diante,
+    # o Método NC. A troca acontece sozinha, pela data.
+    dados, e_nc = cartao_nc.programa_da_data(quando)
+    programa = programa_nc if e_nc else treino
 
     # Programa quebrado não pode virar post. Barrar aqui é mais barato do que
     # descobrir pelo feed.
-    if erros := treino.validar(dados):
+    if erros := programa.validar(dados):
         print("O programa de treinos está inválido; nada foi publicado:")
         for e in erros:
             print(f"  - {e}")
         return 1
 
-    t = treino.treino_de(dados, quando)
+    t = programa.treino_de(dados, quando)
 
     if not args.forcar and not args.dry_run:
         # A conta primeiro: é a fonte de verdade e não depende de o git ter
@@ -209,10 +269,11 @@ def main() -> int:
                   f"(dia {anterior['dia_do_ciclo']} do ciclo). Nada a fazer.")
             return 0
 
-    totais = " / ".join(f"{treino.total_do_nivel(t['niveis'][n])}m"
+    totais = " / ".join(f"{programa.total_do_nivel(t['niveis'][n])}m"
                         for n in gerar_card.ORDEM_NIVEIS)
     print(f"Treino de {quando.isoformat()} — dia {t['dia']}/{len(dados['treinos'])}, "
-          f"{t['bloco']} / {t['foco']}, {totais}")
+          f"{t.get('mesociclo', t.get('bloco'))} / {t['foco']}, {totais}"
+          f"{' (Método NC)' if e_nc else ''}")
 
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
@@ -220,7 +281,7 @@ def main() -> int:
         slides = gerar_card.gerar(quando, dados, nav)
         nav.close()
 
-    legenda = montar_legenda(t, dados, quando)
+    legenda = montar_legenda_nc(t, dados, quando) if e_nc else montar_legenda(t, dados, quando)
     print(f"\nLegenda ({len(legenda)} caracteres):\n{'-'*60}\n{legenda}\n{'-'*60}\n")
 
     cmd = [sys.executable, str(RAIZ / "scripts" / "publish_instagram.py"),

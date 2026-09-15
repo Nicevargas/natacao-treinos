@@ -607,6 +607,11 @@ def render(construir, destino: Path, navegador) -> tuple:
 
 
 def gerar(quando: date, dados: dict, navegador, so_slide: int | None = None) -> list:
+    # Programa do Método NC (tem "zonas"): slides próprios em cartao_nc.py.
+    if "zonas" in dados:
+        import cartao_nc
+        return cartao_nc.gerar(quando, dados, navegador, so_slide)
+
     t = treino_de(dados, quando)
     logo = logo_uri()
     SAIDA.mkdir(exist_ok=True)
@@ -648,7 +653,8 @@ def main():
     args = ap.parse_args()
 
     quando = date.fromisoformat(args.data) if args.data else date.today()
-    dados = carregar()
+    import cartao_nc
+    dados, _ = cartao_nc.programa_da_data(quando)
     with sync_playwright() as p:
         nav = p.chromium.launch()
         gerar(quando, dados, nav, args.so_slide)

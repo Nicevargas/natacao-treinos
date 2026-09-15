@@ -1,0 +1,5767 @@
+{
+  "_sobre": "Cada Dia 1 Treino - @natacaocriativa no Método Natação Criativa (modo Piscina). Ciclo de 28 dias: o dia sai de (data - ancora) mod 28. Vale a partir de 28/09/2026; antes disso o carrossel usa treinos.json.",
+  "_metodo": "OBJETIVO -> INTENSIDADE -> QUALIDADE -> VOLUME. Blocos: ATIVAÇÃO -> PREPARAÇÃO -> DESENVOLVIMENTO -> CONSOLIDAÇÃO -> RECUPERAÇÃO (só os necessários). Toda série declara zona, PSE e intervalo (# aberto, @ fechado). Corretivo nasce de um objetivo e volta ao nado completo. Rode scripts/programa_nc.py para auditar.",
+  "_semana": "Seg Técnica / Ter Resistência / Qua Velocidade / Qui Estilos / Sex Ritmo / Sáb Força específica / Dom Recuperação. Semanas: Base, Construção (+volume), Pico (+densidade ou intensidade), Regeneração (-volume).",
+  "ancora": "2026-09-28",
+  "handle": "@natacaocriativa",
+  "rotulos": {
+    "verde": {
+      "nome": "Pré-condicionamento",
+      "cor": "#8DC63F",
+      "emoji": "🟢",
+      "descricao": "Ainda construindo o nado contínuo: pausas abertas e intensidade leve."
+    },
+    "amarelo": {
+      "nome": "Condicionamento",
+      "cor": "#F7B90B",
+      "emoji": "🟡",
+      "descricao": "Nada contínuo com controle: já recebe A2 e A3 com pausa aberta."
+    },
+    "vermelho": {
+      "nome": "Aperfeiçoamento",
+      "cor": "#E01B62",
+      "emoji": "🔴",
+      "descricao": "Técnica consolidada e ritmo controlado: aceita saída fechada (@)."
+    }
+  },
+  "zonas": {
+    "A0": {
+      "nome": "Recuperação ativa",
+      "pse": "1-3"
+    },
+    "A1": {
+      "nome": "Base aeróbia",
+      "pse": "até 4"
+    },
+    "A2": {
+      "nome": "Resistência aeróbia",
+      "pse": "5-7"
+    },
+    "A3": {
+      "nome": "Potência aeróbia",
+      "pse": "8-10"
+    },
+    "AN": {
+      "nome": "Anaeróbio",
+      "pse": "10"
+    },
+    "AA": {
+      "nome": "Velocidade",
+      "pse": "máx, até 10 s"
+    }
+  },
+  "glossario": [
+    {
+      "termo": "BLOCOS DO TREINO",
+      "texto": "Ativação prepara o corpo. Preparação traz os corretivos e as acelerações. Desenvolvimento é o objetivo do dia. Consolidação transfere para o nado. Recuperação baixa a intensidade."
+    },
+    {
+      "termo": "ZONAS E PSE",
+      "texto": "PSE é a percepção de esforço de 0 a 10. A0 e A1 leves (até 4), A2 moderado (5-7), A3 forte (8-10), AN máximo com pausa longa, AA acelerações de até 10 s."
+    },
+    {
+      "termo": "# E @",
+      "texto": "#20\" = terminou, descansa 20 s. @1'45\" = sai a cada 1'45\", então quem chega antes descansa mais."
+    },
+    {
+      "termo": "CORRETIVO",
+      "texto": "Exercício técnico com um objetivo claro, que sempre volta ao nado completo para a correção ficar no seu nado. Sentiu dor, tontura ou falta de ar incomum? Pare."
+    }
+  ],
+  "treinos": [
+    {
+      "dia": 1,
+      "semana": 1,
+      "mesociclo": "Base",
+      "foco": "Técnica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Técnica do crawl: rotação de ombro e quadril juntos e equilíbrio lateral para respirar; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m rolamento com mãos na coxa",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Rolamento com mãos na coxa",
+                  "objetivo": "rotação de ombro e quadril juntos",
+                  "dica": "Gira o corpo inteiro, não só o braço"
+                }
+              },
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Aplicar as dicas do corretivo",
+                  "Contar as braçadas no 2º 50m"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x25m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Nado completo, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Técnica do crawl: rotação de ombro e quadril juntos e equilíbrio lateral para respirar; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 50m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m rolamento com mãos na coxa",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Rolamento com mãos na coxa",
+                  "objetivo": "rotação de ombro e quadril juntos",
+                  "dica": "Gira o corpo inteiro, não só o braço"
+                }
+              },
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Contar braçadas + tempo",
+                  "Tentar repetir o mesmo número"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Técnica do crawl: rotação de ombro e quadril juntos e equilíbrio lateral para respirar; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 100m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m rolamento com mãos na coxa",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Rolamento com mãos na coxa",
+                  "objetivo": "rotação de ombro e quadril juntos",
+                  "dica": "Gira o corpo inteiro, não só o braço"
+                }
+              },
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "3x400m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Contar braçadas a cada 100m",
+                  "Manter o mesmo número"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Acelerar mantendo a técnica do corretivo"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 2,
+      "semana": 1,
+      "mesociclo": "Base",
+      "foco": "Resistência",
+      "niveis": {
+        "verde": {
+          "objetivo": "Base aeróbia: nadar em ritmo igual do começo ao fim, com um toque curto de A2.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Mesmo ritmo do 1º ao último"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Um pouco mais rápido, respiração controlada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 100m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x100m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Ritmo que daria para sustentar 20 a 30 min"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl c/ pull buoy",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "3x400m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "@7'15\"",
+                "detalhes": [
+                  "Ritmo constante nos três"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Respirando a cada 3 e 5 braçadas"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 3,
+      "semana": 1,
+      "mesociclo": "Base",
+      "foco": "Velocidade",
+      "niveis": {
+        "verde": {
+          "objetivo": "Velocidade com qualidade: acelerações curtas (AA) e base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#45\"",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "2º 25m um pouco mais rápido que o 1º"
+                ]
+              },
+              {
+                "serie": "4x25m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Rápido, sem perder a braçada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Potência aeróbia (A3) depois de acelerações curtas (AA) com o corpo descansado.",
+          "zona": "A3",
+          "ajuste": "Se o tempo cair mais de 3 s ou a técnica desmontar, pare a série ali.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m tocando o ombro na recuperação",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Toca o ombro na recuperação",
+                  "objetivo": "cotovelo alto na recuperação",
+                  "dica": "O cotovelo sobe primeiro, a mão passa perto do corpo"
+                }
+              },
+              {
+                "serie": "6x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "10x50m Crawl",
+                "zona": "A3",
+                "pse": "8-9",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Tempo-alvo igual em todas",
+                  "Se o tempo cair mais de 3 s, pare"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "3x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Recuperação programada, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Potência aeróbia (A3) depois de acelerações curtas (AA) com o corpo descansado.",
+          "zona": "A3",
+          "ajuste": "Se o tempo cair mais de 3 s ou a técnica desmontar, pare a série ali.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m tocando o ombro na recuperação",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Toca o ombro na recuperação",
+                  "objetivo": "cotovelo alto na recuperação",
+                  "dica": "O cotovelo sobe primeiro, a mão passa perto do corpo"
+                }
+              },
+              {
+                "serie": "8x25m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'30\"",
+                "detalhes": [
+                  "Acelerar só 8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "10x75m Crawl",
+                "zona": "A3",
+                "pse": "8-9",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Tempo-alvo igual em todas",
+                  "Se o tempo cair mais de 3 s, pare"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Recuperação programada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 4,
+      "semana": 1,
+      "mesociclo": "Base",
+      "foco": "Estilos",
+      "niveis": {
+        "verde": {
+          "objetivo": "Estilos: rotação no costas sem mexer a cabeça no costas e joelhos dentro da largura do quadril no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 50m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m costas com rolamento de ombro",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com rolamento de ombro",
+                  "objetivo": "rotação no costas sem mexer a cabeça",
+                  "dica": "O ombro sai da água, a cabeça fica parada"
+                }
+              },
+              {
+                "serie": "4x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#25\"",
+                "detalhes": [
+                  "25m pernada de peito de costas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada de peito de costas",
+                  "objetivo": "joelhos dentro da largura do quadril",
+                  "dica": "O calcanhar vai ao bumbum; o joelho não abre"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x50m Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "4x50m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Estilos: rotação no costas sem mexer a cabeça no costas e joelhos dentro da largura do quadril no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Estilos",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "100m crawl, 100m costas, 100m peito, 100m crawl"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m costas com rolamento de ombro",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com rolamento de ombro",
+                  "objetivo": "rotação no costas sem mexer a cabeça",
+                  "dica": "O ombro sai da água, a cabeça fica parada"
+                }
+              },
+              {
+                "serie": "6x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m pernada de peito de costas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada de peito de costas",
+                  "objetivo": "joelhos dentro da largura do quadril",
+                  "dica": "O calcanhar vai ao bumbum; o joelho não abre"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x100m Costas",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "4x100m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Estilos: ondulação que nasce no peito na borboleta e joelhos dentro da largura do quadril no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Medley",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m de cada nado"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Borboleta",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m ondulação em flecha",
+                  "25m borboleta nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Ondulação em flecha",
+                  "objetivo": "ondulação que nasce no peito",
+                  "dica": "A onda começa no peito, não no joelho"
+                }
+              },
+              {
+                "serie": "6x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m pernada de peito de costas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada de peito de costas",
+                  "objetivo": "joelhos dentro da largura do quadril",
+                  "dica": "O calcanhar vai ao bumbum; o joelho não abre"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x150m Estilos",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "50m costas, 50m peito, 50m crawl"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x25m Borboleta",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Nado completo com as duas pernadas"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 5,
+      "semana": 1,
+      "mesociclo": "Base",
+      "foco": "Ritmo",
+      "niveis": {
+        "verde": {
+          "objetivo": "Controle de ritmo: começar controlado e terminar um pouco mais rápido.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "3x200m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "2º 100m um pouco mais rápido que o 1º"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x25m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Rápido e solto"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x200m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Passagem negativa: 2º 100m mais rápido"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "200m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x300m Crawl",
+                "zona": "A2",
+                "pse": "5-7",
+                "intervalo": "@5'35\"",
+                "detalhes": [
+                  "Passagem negativa: 150m controlados + 150m mais rápidos"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x75m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 6,
+      "semana": 1,
+      "mesociclo": "Base",
+      "foco": "Força específica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Força específica com material: sentir a água com nadadeira e prancha, em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ nadadeira",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m com palmar segurado na mão",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmar segurado na mão",
+                  "objetivo": "pegada alta e firme",
+                  "dica": "Cotovelo alto; o palmar empurra a água para trás"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x50m Crawl c/ nadadeira",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "4x50m Pernada c/ prancha",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m com palmar segurado na mão",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmar segurado na mão",
+                  "objetivo": "pegada alta e firme",
+                  "dica": "Cotovelo alto; o palmar empurra a água para trás"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#25\""
+              },
+              {
+                "serie": "4x50m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\""
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl sem material",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Sentir a diferença na pegada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m com palmar segurado na mão",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmar segurado na mão",
+                  "objetivo": "pegada alta e firme",
+                  "dica": "Cotovelo alto; o palmar empurra a água para trás"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x200m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "5-7",
+                "intervalo": "@3'50\""
+              },
+              {
+                "serie": "8x25m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "6-7",
+                "intervalo": "#20\""
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x100m Crawl sem material",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Sentir a diferença na pegada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 7,
+      "semana": 1,
+      "mesociclo": "Base",
+      "foco": "Recuperação",
+      "niveis": {
+        "verde": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x100m Crawl e Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "50m de cada nado"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "300m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "400m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 8,
+      "semana": 2,
+      "mesociclo": "Construção",
+      "foco": "Técnica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Técnica do crawl: sentir o antebraço empurrando a água e sensibilidade e apoio das mãos na água; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              },
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m palmateio frontal",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmateio frontal",
+                  "objetivo": "sensibilidade e apoio das mãos na água",
+                  "dica": "Mãos desenham um oito pequeno à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Aplicar as dicas do corretivo",
+                  "Contar as braçadas no 2º 50m"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Técnica do crawl: sentir o antebraço empurrando a água e sensibilidade e apoio das mãos na água; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 50m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              },
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m palmateio frontal",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmateio frontal",
+                  "objetivo": "sensibilidade e apoio das mãos na água",
+                  "dica": "Mãos desenham um oito pequeno à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "9x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Contar braçadas + tempo",
+                  "Tentar repetir o mesmo número"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Técnica do crawl: sentir o antebraço empurrando a água e sensibilidade e apoio das mãos na água; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 100m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              },
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m palmateio frontal",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmateio frontal",
+                  "objetivo": "sensibilidade e apoio das mãos na água",
+                  "dica": "Mãos desenham um oito pequeno à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "12x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Braçada longa e contada"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Acelerar mantendo a técnica do corretivo"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 9,
+      "semana": 2,
+      "mesociclo": "Construção",
+      "foco": "Resistência",
+      "niveis": {
+        "verde": {
+          "objetivo": "Base aeróbia: nadar em ritmo igual do começo ao fim, com um toque curto de A2.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Mesmo ritmo do 1º ao último"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Um pouco mais rápido, respiração controlada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 100m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "9x100m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Ritmo que daria para sustentar 20 a 30 min"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl c/ pull buoy",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m 6 pernadas laterais + troca",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "6 pernadas laterais + troca",
+                  "objetivo": "equilíbrio lateral para respirar",
+                  "dica": "Um óculos dentro d'água, outro fora"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x300m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "@5'35\"",
+                "detalhes": [
+                  "Ritmo constante"
+                ]
+              },
+              {
+                "serie": "200m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Respirando a cada 3 e 5 braçadas"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 10,
+      "semana": 2,
+      "mesociclo": "Construção",
+      "foco": "Velocidade",
+      "niveis": {
+        "verde": {
+          "objetivo": "Velocidade com qualidade: acelerações curtas (AA) e base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#45\"",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "9x50m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "2º 25m um pouco mais rápido que o 1º"
+                ]
+              },
+              {
+                "serie": "4x25m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Rápido, sem perder a braçada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Potência aeróbia (A3) depois de acelerações curtas (AA) com o corpo descansado.",
+          "zona": "A3",
+          "ajuste": "Se o tempo cair mais de 3 s ou a técnica desmontar, pare a série ali.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              },
+              {
+                "serie": "6x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "11x50m Crawl",
+                "zona": "A3",
+                "pse": "8-9",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Tempo-alvo igual em todas",
+                  "Se o tempo cair mais de 3 s, pare"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "3x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Recuperação programada, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Potência aeróbia (A3) depois de acelerações curtas (AA) com o corpo descansado.",
+          "zona": "A3",
+          "ajuste": "Se o tempo cair mais de 3 s ou a técnica desmontar, pare a série ali.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              },
+              {
+                "serie": "8x25m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'30\"",
+                "detalhes": [
+                  "Acelerar só 8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "11x75m Crawl",
+                "zona": "A3",
+                "pse": "8-9",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Tempo-alvo igual em todas",
+                  "Se o tempo cair mais de 3 s, pare"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Recuperação programada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 11,
+      "semana": 2,
+      "mesociclo": "Construção",
+      "foco": "Estilos",
+      "niveis": {
+        "verde": {
+          "objetivo": "Estilos: cabeça estável e quadril alto no costas e deslize entre os ciclos do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 50m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m costas com cabeça imóvel",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com cabeça imóvel",
+                  "objetivo": "cabeça estável e quadril alto",
+                  "dica": "Olhos no teto, queixo parado"
+                }
+              },
+              {
+                "serie": "4x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#25\"",
+                "detalhes": [
+                  "25m 1 braçada + 2 pernadas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "1 braçada + 2 pernadas",
+                  "objetivo": "deslize entre os ciclos do peito",
+                  "dica": "Braça, respira, chuta, desliza"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x50m Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "5x50m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Estilos: cabeça estável e quadril alto no costas e deslize entre os ciclos do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Estilos",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "100m crawl, 100m costas, 100m peito, 100m crawl"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m costas com cabeça imóvel",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com cabeça imóvel",
+                  "objetivo": "cabeça estável e quadril alto",
+                  "dica": "Olhos no teto, queixo parado"
+                }
+              },
+              {
+                "serie": "4x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 1 braçada + 2 pernadas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "1 braçada + 2 pernadas",
+                  "objetivo": "deslize entre os ciclos do peito",
+                  "dica": "Braça, respira, chuta, desliza"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x100m Costas",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "5x100m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Estilos: encaixar as duas pernadas na braçada na borboleta e deslize entre os ciclos do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Medley",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m de cada nado"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Borboleta",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 3 pernadas + 1 braçada",
+                  "25m borboleta nado completo"
+                ],
+                "corretivo": {
+                  "nome": "3 pernadas + 1 braçada",
+                  "objetivo": "encaixar as duas pernadas na braçada",
+                  "dica": "Uma pernada na entrada das mãos, outra na saída"
+                }
+              },
+              {
+                "serie": "6x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 1 braçada + 2 pernadas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "1 braçada + 2 pernadas",
+                  "objetivo": "deslize entre os ciclos do peito",
+                  "dica": "Braça, respira, chuta, desliza"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x150m Estilos",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "50m costas, 50m peito, 50m crawl"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x25m Borboleta",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Nado completo com as duas pernadas"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 12,
+      "semana": 2,
+      "mesociclo": "Construção",
+      "foco": "Ritmo",
+      "niveis": {
+        "verde": {
+          "objetivo": "Controle de ritmo: começar controlado e terminar um pouco mais rápido.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x200m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "2º 100m um pouco mais rápido que o 1º"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x25m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Rápido e solto"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x200m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Passagem negativa: 2º 100m mais rápido"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "200m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x300m Crawl",
+                "zona": "A2",
+                "pse": "5-7",
+                "intervalo": "@5'35\"",
+                "detalhes": [
+                  "Passagem negativa: 150m controlados + 150m mais rápidos"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x75m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 13,
+      "semana": 2,
+      "mesociclo": "Construção",
+      "foco": "Força específica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Força específica com material: sentir a água com nadadeira e prancha, em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ nadadeira",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m palmateio frontal",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmateio frontal",
+                  "objetivo": "sensibilidade e apoio das mãos na água",
+                  "dica": "Mãos desenham um oito pequeno à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x50m Crawl c/ nadadeira",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "5x50m Pernada c/ prancha",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m palmateio frontal",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmateio frontal",
+                  "objetivo": "sensibilidade e apoio das mãos na água",
+                  "dica": "Mãos desenham um oito pequeno à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x100m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#25\""
+              },
+              {
+                "serie": "4x50m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\""
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl sem material",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Sentir a diferença na pegada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m palmateio frontal",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmateio frontal",
+                  "objetivo": "sensibilidade e apoio das mãos na água",
+                  "dica": "Mãos desenham um oito pequeno à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x200m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "5-7",
+                "intervalo": "@3'50\""
+              },
+              {
+                "serie": "8x25m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "6-7",
+                "intervalo": "#20\""
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x100m Crawl sem material",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Sentir a diferença na pegada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 14,
+      "semana": 2,
+      "mesociclo": "Construção",
+      "foco": "Recuperação",
+      "niveis": {
+        "verde": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m costas com cabeça imóvel",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com cabeça imóvel",
+                  "objetivo": "cabeça estável e quadril alto",
+                  "dica": "Olhos no teto, queixo parado"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x100m Crawl e Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "50m de cada nado"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m costas com cabeça imóvel",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com cabeça imóvel",
+                  "objetivo": "cabeça estável e quadril alto",
+                  "dica": "Olhos no teto, queixo parado"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "300m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m costas com cabeça imóvel",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com cabeça imóvel",
+                  "objetivo": "cabeça estável e quadril alto",
+                  "dica": "Olhos no teto, queixo parado"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "400m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 15,
+      "semana": 3,
+      "mesociclo": "Pico",
+      "foco": "Técnica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Técnica do crawl: cotovelo alto na recuperação e entrada da mão alinhada ao ombro; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m tocando o ombro na recuperação",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Toca o ombro na recuperação",
+                  "objetivo": "cotovelo alto na recuperação",
+                  "dica": "O cotovelo sobe primeiro, a mão passa perto do corpo"
+                }
+              },
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\"",
+                "detalhes": [
+                  "Aplicar as dicas do corretivo",
+                  "Contar as braçadas no 2º 50m"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Técnica do crawl: cotovelo alto na recuperação e entrada da mão alinhada ao ombro; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 50m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m tocando o ombro na recuperação",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Toca o ombro na recuperação",
+                  "objetivo": "cotovelo alto na recuperação",
+                  "dica": "O cotovelo sobe primeiro, a mão passa perto do corpo"
+                }
+              },
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "9x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Contar braçadas + tempo",
+                  "Tentar repetir o mesmo número"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Técnica do crawl: cotovelo alto na recuperação e entrada da mão alinhada ao ombro; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 100m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m tocando o ombro na recuperação",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Toca o ombro na recuperação",
+                  "objetivo": "cotovelo alto na recuperação",
+                  "dica": "O cotovelo sobe primeiro, a mão passa perto do corpo"
+                }
+              },
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x200m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Contar braçadas a cada 50m"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Acelerar mantendo a técnica do corretivo"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 16,
+      "semana": 3,
+      "mesociclo": "Pico",
+      "foco": "Resistência",
+      "niveis": {
+        "verde": {
+          "objetivo": "Base aeróbia: nadar em ritmo igual do começo ao fim, com um toque curto de A2.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Mesmo ritmo do 1º ao último"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Um pouco mais rápido, respiração controlada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 100m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "9x100m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Ritmo que daria para sustentar 20 a 30 min"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl c/ pull buoy",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x300m Crawl",
+                "zona": "A2",
+                "pse": "6-7",
+                "intervalo": "@5'25\"",
+                "detalhes": [
+                  "Ritmo constante, saída mais curta"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Respirando a cada 3 e 5 braçadas"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 17,
+      "semana": 3,
+      "mesociclo": "Pico",
+      "foco": "Velocidade",
+      "niveis": {
+        "verde": {
+          "objetivo": "Velocidade com qualidade: acelerações curtas (AA) e base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#45\"",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "9x50m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "2º 25m um pouco mais rápido que o 1º"
+                ]
+              },
+              {
+                "serie": "4x25m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Rápido, sem perder a braçada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Potência aeróbia (A3) depois de acelerações curtas (AA) com o corpo descansado.",
+          "zona": "A3",
+          "ajuste": "Se o tempo cair mais de 3 s ou a técnica desmontar, pare a série ali.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              },
+              {
+                "serie": "6x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "11x50m Crawl",
+                "zona": "A3",
+                "pse": "8-9",
+                "intervalo": "#55\"",
+                "detalhes": [
+                  "Tempo-alvo igual em todas",
+                  "Se o tempo cair mais de 3 s, pare"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "3x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Recuperação programada, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Potência anaeróbia (AN) em poucas repetições de altíssima qualidade.",
+          "zona": "AN",
+          "ajuste": "Qualidade acima de tudo: se a técnica desmontar, encerre a série e nade leve.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              },
+              {
+                "serie": "6x25m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'30\"",
+                "detalhes": [
+                  "Acelerar só 8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "AN",
+                "pse": "10",
+                "intervalo": "#3'",
+                "detalhes": [
+                  "Máxima qualidade",
+                  "Recuperação ativa bem leve"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Recuperação programada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "300m Costas e Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 18,
+      "semana": 3,
+      "mesociclo": "Pico",
+      "foco": "Estilos",
+      "niveis": {
+        "verde": {
+          "objetivo": "Estilos: entrada pelo dedo mínimo e puxada completa no costas e braçada curta à frente do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 50m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m costas unilateral",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas unilateral",
+                  "objetivo": "entrada pelo dedo mínimo e puxada completa",
+                  "dica": "O dedo mínimo entra primeiro"
+                }
+              },
+              {
+                "serie": "4x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#25\"",
+                "detalhes": [
+                  "25m braçada de peito com pull buoy",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Braçada de peito com pull buoy",
+                  "objetivo": "braçada curta à frente do peito",
+                  "dica": "As mãos não passam da linha do peito"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x50m Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "5x50m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Estilos: entrada pelo dedo mínimo e puxada completa no costas e braçada curta à frente do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Estilos",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "100m crawl, 100m costas, 100m peito, 100m crawl"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m costas unilateral",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas unilateral",
+                  "objetivo": "entrada pelo dedo mínimo e puxada completa",
+                  "dica": "O dedo mínimo entra primeiro"
+                }
+              },
+              {
+                "serie": "4x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m braçada de peito com pull buoy",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Braçada de peito com pull buoy",
+                  "objetivo": "braçada curta à frente do peito",
+                  "dica": "As mãos não passam da linha do peito"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x100m Costas",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              },
+              {
+                "serie": "5x100m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Estilos: encaixar as duas pernadas na braçada na borboleta e braçada curta à frente do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Medley",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m de cada nado"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Borboleta",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 3 pernadas + 1 braçada",
+                  "25m borboleta nado completo"
+                ],
+                "corretivo": {
+                  "nome": "3 pernadas + 1 braçada",
+                  "objetivo": "encaixar as duas pernadas na braçada",
+                  "dica": "Uma pernada na entrada das mãos, outra na saída"
+                }
+              },
+              {
+                "serie": "6x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m braçada de peito com pull buoy",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Braçada de peito com pull buoy",
+                  "objetivo": "braçada curta à frente do peito",
+                  "dica": "As mãos não passam da linha do peito"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x150m Estilos",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "50m costas, 50m peito, 50m crawl"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x25m Borboleta",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Nado completo com as duas pernadas"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 19,
+      "semana": 3,
+      "mesociclo": "Pico",
+      "foco": "Ritmo",
+      "niveis": {
+        "verde": {
+          "objetivo": "Controle de ritmo: começar controlado e terminar um pouco mais rápido.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x200m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\"",
+                "detalhes": [
+                  "2º 100m um pouco mais rápido que o 1º"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x25m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Rápido e solto"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x200m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#25\"",
+                "detalhes": [
+                  "Passagem negativa: 2º 100m mais rápido"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "200m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m unilateral, braço livre à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Unilateral de controle",
+                  "objetivo": "entrada da mão alinhada ao ombro",
+                  "dica": "A mão entra na linha do ombro, sem cruzar"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x300m Crawl",
+                "zona": "A2",
+                "pse": "6-7",
+                "intervalo": "@5'25\"",
+                "detalhes": [
+                  "Passagem negativa, saída mais curta"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x75m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 20,
+      "semana": 3,
+      "mesociclo": "Pico",
+      "foco": "Força específica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Força específica com material: sentir a água com nadadeira e prancha, em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ nadadeira",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m com palmar segurado na mão",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmar segurado na mão",
+                  "objetivo": "pegada alta e firme",
+                  "dica": "Cotovelo alto; o palmar empurra a água para trás"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x50m Crawl c/ nadadeira",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              },
+              {
+                "serie": "5x50m Pernada c/ prancha",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m com palmar segurado na mão",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmar segurado na mão",
+                  "objetivo": "pegada alta e firme",
+                  "dica": "Cotovelo alto; o palmar empurra a água para trás"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "7x100m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "4x50m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\""
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl sem material",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Sentir a diferença na pegada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m com palmar segurado na mão",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Palmar segurado na mão",
+                  "objetivo": "pegada alta e firme",
+                  "dica": "Cotovelo alto; o palmar empurra a água para trás"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x200m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "6-7",
+                "intervalo": "@3'45\"",
+                "detalhes": [
+                  "Saída mais curta"
+                ]
+              },
+              {
+                "serie": "8x25m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "6-7",
+                "intervalo": "#20\""
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x100m Crawl sem material",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Sentir a diferença na pegada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 21,
+      "semana": 3,
+      "mesociclo": "Pico",
+      "foco": "Recuperação",
+      "niveis": {
+        "verde": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x100m Crawl e Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "50m de cada nado"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "300m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "400m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 22,
+      "semana": 4,
+      "mesociclo": "Regeneração",
+      "foco": "Técnica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Técnica do crawl: deslize e coordenação entre os braços e alinhamento do corpo e pernada a partir do quadril; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              },
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Aplicar as dicas do corretivo",
+                  "Contar as braçadas no 2º 50m"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Técnica do crawl: deslize e coordenação entre os braços e alinhamento do corpo e pernada a partir do quadril; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 50m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              },
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Contar braçadas + tempo",
+                  "Tentar repetir o mesmo número"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Técnica do crawl: deslize e coordenação entre os braços e alinhamento do corpo e pernada a partir do quadril; base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Cada 100m um pouco mais rápido"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              },
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Braçada longa e solta"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 23,
+      "semana": 4,
+      "mesociclo": "Regeneração",
+      "foco": "Resistência",
+      "niveis": {
+        "verde": {
+          "objetivo": "Base aeróbia: nadar em ritmo igual do começo ao fim, com um toque curto de A2.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x100m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Mesmo ritmo do 1º ao último"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 100m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Ritmo que daria para sustentar 20 a 30 min"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Resistência aeróbia (A2): sustentar um ritmo moderado com a técnica estável.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m espera à frente",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Espera à frente",
+                  "objetivo": "deslize e coordenação entre os braços",
+                  "dica": "Uma mão espera a outra chegar à frente"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "8x100m Crawl",
+                "zona": "A2",
+                "pse": "5",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Ritmo confortável"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 24,
+      "semana": 4,
+      "mesociclo": "Regeneração",
+      "foco": "Velocidade",
+      "niveis": {
+        "verde": {
+          "objetivo": "Velocidade com qualidade: acelerações curtas (AA) e base aeróbia em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#45\"",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "2º 25m um pouco mais rápido que o 1º"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Potência aeróbia (A3) depois de acelerações curtas (AA) com o corpo descansado.",
+          "zona": "A3",
+          "ajuste": "Se o tempo cair mais de 3 s ou a técnica desmontar, pare a série ali.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              },
+              {
+                "serie": "5x15m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Acelerar só 6-8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A3",
+                "pse": "8-9",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Tempo-alvo igual em todas",
+                  "Se o tempo cair mais de 3 s, pare"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Potência aeróbia (A3) depois de acelerações curtas (AA) com o corpo descansado.",
+          "zona": "A3",
+          "ajuste": "Se o tempo cair mais de 3 s ou a técnica desmontar, pare a série ali.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              },
+              {
+                "serie": "6x25m Crawl",
+                "zona": "AA",
+                "pse": "máx",
+                "intervalo": "#1'30\"",
+                "detalhes": [
+                  "Acelerar só 8 s",
+                  "Soltar até a parede"
+                ]
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x75m Crawl",
+                "zona": "A3",
+                "pse": "8-9",
+                "intervalo": "#1'",
+                "detalhes": [
+                  "Tempo-alvo igual em todas",
+                  "Se o tempo cair mais de 3 s, pare"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Recuperação programada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 25,
+      "semana": 4,
+      "mesociclo": "Regeneração",
+      "foco": "Estilos",
+      "niveis": {
+        "verde": {
+          "objetivo": "Estilos: rotação no costas sem mexer a cabeça no costas e deslize entre os ciclos do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl e Costas",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "Alternando a cada 50m"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m costas com rolamento de ombro",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com rolamento de ombro",
+                  "objetivo": "rotação no costas sem mexer a cabeça",
+                  "dica": "O ombro sai da água, a cabeça fica parada"
+                }
+              },
+              {
+                "serie": "3x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#25\"",
+                "detalhes": [
+                  "25m 1 braçada + 2 pernadas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "1 braçada + 2 pernadas",
+                  "objetivo": "deslize entre os ciclos do peito",
+                  "dica": "Braça, respira, chuta, desliza"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x50m Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "3x50m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Estilos: rotação no costas sem mexer a cabeça no costas e deslize entre os ciclos do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Estilos",
+                "zona": "A0",
+                "pse": "2",
+                "detalhes": [
+                  "100m crawl, 100m costas, 100m peito, 100m crawl"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Costas",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m costas com rolamento de ombro",
+                  "25m costas nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Costas com rolamento de ombro",
+                  "objetivo": "rotação no costas sem mexer a cabeça",
+                  "dica": "O ombro sai da água, a cabeça fica parada"
+                }
+              },
+              {
+                "serie": "4x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 1 braçada + 2 pernadas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "1 braçada + 2 pernadas",
+                  "objetivo": "deslize entre os ciclos do peito",
+                  "dica": "Braça, respira, chuta, desliza"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "3x100m Costas",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "3x100m Peito",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#25\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Crawl solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Estilos: ondulação que nasce no peito na borboleta e deslize entre os ciclos do peito no peito.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x100m Medley",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m de cada nado"
+                ]
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Borboleta",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m ondulação em flecha",
+                  "25m borboleta nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Ondulação em flecha",
+                  "objetivo": "ondulação que nasce no peito",
+                  "dica": "A onda começa no peito, não no joelho"
+                }
+              },
+              {
+                "serie": "6x50m Peito",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m 1 braçada + 2 pernadas",
+                  "25m peito nado completo"
+                ],
+                "corretivo": {
+                  "nome": "1 braçada + 2 pernadas",
+                  "objetivo": "deslize entre os ciclos do peito",
+                  "dica": "Braça, respira, chuta, desliza"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x150m Estilos",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "50m costas, 50m peito, 50m crawl"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 26,
+      "semana": 4,
+      "mesociclo": "Regeneração",
+      "foco": "Ritmo",
+      "niveis": {
+        "verde": {
+          "objetivo": "Controle de ritmo: começar controlado e terminar um pouco mais rápido.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ prancha",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "3x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "2x200m Crawl",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "2º 100m um pouco mais rápido que o 1º"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "3x200m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "Passagem negativa: 2º 100m mais rápido"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Ritmo em A2 com passagem negativa: segunda metade mais rápida que a primeira.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "200m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m respirando a cada 3 braçadas",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Respiração bilateral",
+                  "objetivo": "braçada simétrica dos dois lados",
+                  "dica": "Respira a cada 3 braçadas, girando a cabeça junto com o corpo"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "3x300m Crawl",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "@5'35\"",
+                "detalhes": [
+                  "Passagem negativa"
+                ]
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "6x75m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 27,
+      "semana": 4,
+      "mesociclo": "Regeneração",
+      "foco": "Força específica",
+      "niveis": {
+        "verde": {
+          "objetivo": "Força específica com material: sentir a água com nadadeira e prancha, em A1.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "200m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x25m Pernada c/ nadadeira",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x50m Crawl c/ nadadeira",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#20\""
+              },
+              {
+                "serie": "3x50m Pernada c/ prancha",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#30\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x100m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#25\""
+              },
+              {
+                "serie": "4x50m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "#20\""
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Força específica de braço em A2 com palmar e pull buoy, e transferência sem material.",
+          "zona": "A2",
+          "ajuste": "Se a PSE passar de 7 antes da metade da série, tire uma repetição ou some 10 s ao intervalo.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              },
+              {
+                "serie": "4x50m Crawl progressivo",
+                "zona": "A1",
+                "pse": "3-4",
+                "intervalo": "#15\""
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "8x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m mão fechada",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Mão fechada",
+                  "objetivo": "sentir o antebraço empurrando a água",
+                  "dica": "Empurra com o braço inteiro, não só com a mão"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "4x200m Crawl c/ palmar + pull buoy",
+                "zona": "A2",
+                "pse": "5-6",
+                "intervalo": "@3'50\""
+              },
+              {
+                "serie": "8x25m Pernada c/ nadadeira",
+                "zona": "A2",
+                "pse": "6-7",
+                "intervalo": "#20\""
+              }
+            ],
+            "consolidacao": [
+              {
+                "serie": "4x100m Crawl sem material",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "Sentir a diferença na pegada"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "dia": 28,
+      "semana": 4,
+      "mesociclo": "Regeneração",
+      "foco": "Recuperação",
+      "niveis": {
+        "verde": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "100m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "3x100m Crawl e Costas",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#30\"",
+                "detalhes": [
+                  "50m de cada nado"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "100m Costas solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "amarelo": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "300m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "4x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "5x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "200m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        },
+        "vermelho": {
+          "objetivo": "Recuperação: nado leve e técnico para absorver a semana.",
+          "zona": "A1",
+          "ajuste": "Se a PSE passar de 4 ou a braçada encurtar, aumente o intervalo em 10 s.",
+          "blocos": {
+            "ativacao": [
+              {
+                "serie": "400m Crawl leve",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ],
+            "preparacao": [
+              {
+                "serie": "6x50m Crawl",
+                "zona": "A0",
+                "pse": "2-3",
+                "intervalo": "#15\"",
+                "detalhes": [
+                  "25m pernada em flecha",
+                  "25m crawl nado completo"
+                ],
+                "corretivo": {
+                  "nome": "Pernada em flecha",
+                  "objetivo": "alinhamento do corpo e pernada a partir do quadril",
+                  "dica": "Corpo comprido, pernada curta e contínua"
+                }
+              }
+            ],
+            "desenvolvimento": [
+              {
+                "serie": "6x100m Crawl",
+                "zona": "A1",
+                "pse": "3",
+                "intervalo": "#20\"",
+                "detalhes": [
+                  "Respiração tranquila, braçada longa"
+                ]
+              }
+            ],
+            "recuperacao": [
+              {
+                "serie": "400m Costas e Peito solto",
+                "zona": "A0",
+                "pse": "2"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
