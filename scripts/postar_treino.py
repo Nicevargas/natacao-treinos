@@ -101,7 +101,7 @@ def montar_legenda(t: dict, dados: dict, quando: date) -> str:
     )
 
 
-# Legenda do Método NC (desde 28/09/2026). A frase de ASSINATURA e a linha
+# Legenda do Método NC (desde 15/09/2026). A frase de ASSINATURA e a linha
 # "Dia, dd/mm" continuam na legenda: é por elas que publicado_na_conta() acha o
 # nosso carrossel no feed.
 SOBRE_O_FOCO_NC = {
@@ -242,8 +242,8 @@ def main() -> int:
     args = ap.parse_args()
 
     quando = date.fromisoformat(args.data) if args.data else date.today()
-    # Até 27/09/2026 sai treinos.json; da âncora de programa_nc.json em diante,
-    # o Método NC. A troca acontece sozinha, pela data.
+    # Até 14/09/2026 saiu treinos.json; da âncora de programa_nc.json (15/09) em
+    # diante, o Método NC. A troca acontece sozinha, pela data.
     dados, e_nc = cartao_nc.programa_da_data(quando)
     programa = programa_nc if e_nc else treino
 

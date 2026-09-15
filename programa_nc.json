@@ -1,8 +1,8 @@
 {
-  "_sobre": "Cada Dia 1 Treino - @natacaocriativa no Método Natação Criativa (modo Piscina). Ciclo de 28 dias: o dia sai de (data - ancora) mod 28. Vale a partir de 28/09/2026; antes disso o carrossel usa treinos.json.",
+  "_sobre": "Cada Dia 1 Treino - @natacaocriativa no Método Natação Criativa (modo Piscina). Ciclo de 28 dias: o dia sai de (data - ancora) mod 28. Vale a partir de 15/09/2026; antes disso o carrossel usa treinos.json.",
   "_metodo": "OBJETIVO -> INTENSIDADE -> QUALIDADE -> VOLUME. Blocos: ATIVAÇÃO -> PREPARAÇÃO -> DESENVOLVIMENTO -> CONSOLIDAÇÃO -> RECUPERAÇÃO (só os necessários). Toda série declara zona, PSE e intervalo (# aberto, @ fechado). Corretivo nasce de um objetivo e volta ao nado completo. Rode scripts/programa_nc.py para auditar.",
-  "_semana": "Seg Técnica / Ter Resistência / Qua Velocidade / Qui Estilos / Sex Ritmo / Sáb Força específica / Dom Recuperação. Semanas: Base, Construção (+volume), Pico (+densidade ou intensidade), Regeneração (-volume).",
-  "ancora": "2026-09-28",
+  "_semana": "Ter Técnica / Qua Resistência / Qui Velocidade / Sex Estilos / Sáb Ritmo / Dom Força específica / Seg Recuperação (a âncora, uma terça, é o dia da Técnica). Semanas: Base, Construção (+volume), Pico (+densidade ou intensidade), Regeneração (-volume).",
+  "ancora": "2026-09-15",
   "handle": "@natacaocriativa",
   "rotulos": {
     "verde": {

@@ -1,8 +1,8 @@
 """
 programa_nc.py - Programa "Cada Dia 1 Treino" no Método Natação Criativa.
 
-Vale a partir de 28/09/2026 (âncora de programa_nc.json). Até lá o carrossel
-continua saindo de treinos.json; postar_treino.py escolhe pela data.
+Vale da âncora de programa_nc.json (15/09/2026) em diante. Antes dela o
+carrossel sai de treinos.json; postar_treino.py escolhe pela data.
 
 O método manda na ordem: OBJETIVO -> INTENSIDADE -> QUALIDADE -> VOLUME. Por
 isso a auditoria não exige metragem redonda nem faixa de metros por nível: ela
@@ -380,9 +380,9 @@ def validar(dados: dict) -> list:
 
     if len(treinos) % 7:
         problemas.append(f"O ciclo tem {len(treinos)} dias; precisa ser múltiplo de 7.")
-    anc = date.fromisoformat(dados["ancora"])
-    if anc.weekday() != 0:
-        problemas.append(f"A âncora {anc} precisa ser uma segunda-feira.")
+    # A âncora pode cair em qualquer dia: com o ciclo múltiplo de 7, cada foco
+    # fica preso sempre ao mesmo dia da semana (o dia da âncora é o da Técnica).
+    date.fromisoformat(dados["ancora"])
 
     for i, t in enumerate(treinos):
         rot = f"dia {t.get('dia')}"

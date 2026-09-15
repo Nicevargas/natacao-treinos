@@ -65,8 +65,8 @@ jobs:
       - name: Conferir o programa de treinos
         run: python scripts/treino.py
 
-      # Programa do Método NC, que passa a valer em 28/09/2026. Auditado todo dia
-      # desde já: um erro nele aparece antes da troca, não no dia dela.
+      # Programa do Método NC (vale desde 15/09/2026). Auditoria reprovada não
+      # vira post.
       - name: Auditar o programa do Método NC
         run: python scripts/programa_nc.py
 

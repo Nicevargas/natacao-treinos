@@ -1,5 +1,5 @@
 """
-cartao_nc.py - Slides do carrossel no Método Natação Criativa (desde 28/09/2026).
+cartao_nc.py - Slides do carrossel no Método Natação Criativa (desde 15/09/2026).
 
 Mesma identidade de gerar_card.py (fundo, cabeçalho, rodapé, fontes e o ajuste
 automático da fonte). Muda o miolo:
