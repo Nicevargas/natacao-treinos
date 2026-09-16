@@ -71,6 +71,12 @@ jobs:
       - name: Auditar o programa do Método NC
         run: python scripts/programa_nc.py
 
+      # Águas abertas (slides 5 e 6). Não barra o post: com o programa inválido,
+      # o carrossel sai sem os slides de águas abertas.
+      - name: Auditar o programa de águas abertas
+        continue-on-error: true
+        run: python scripts/programa_aa.py
+
       - name: Identidade do commit das imagens
         run: |
           git config user.name  "github-actions[bot]"

@@ -648,7 +648,7 @@ def gerar(quando: date, dados: dict, navegador, so_slide: int | None = None) -> 
 def main():
     ap = argparse.ArgumentParser(description="Gera o carrossel do treino do dia.")
     ap.add_argument("--data", help="AAAA-MM-DD (padrão: hoje)")
-    ap.add_argument("--so-slide", type=int, choices=[1, 2, 3, 4, 5],
+    ap.add_argument("--so-slide", type=int, choices=[1, 2, 3, 4, 5, 6, 7],
                     help="Renderiza apenas um slide.")
     args = ap.parse_args()
 

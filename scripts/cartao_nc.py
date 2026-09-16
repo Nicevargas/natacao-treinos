@@ -8,7 +8,12 @@ automático da fonte). Muda o miolo:
     2  verde       Pré-condicionamento
     3  amarelo     Condicionamento
     4  vermelho    Aperfeiçoamento
-    5  glossário   como ler: blocos, zonas e PSE, # e @, corretivo
+    5  águas       Águas abertas, Condicionamento   (desde 17/09/2026, programa_aa.json)
+    6  águas       Águas abertas, Aperfeiçoamento
+    7  glossário   como ler: blocos, zonas e PSE, # e @, corretivo, sighting e segurança
+
+Sem programa_aa.json válido, os slides de águas abertas não entram e o carrossel
+sai com os cinco de sempre.
 
 Em cada treino: o objetivo do dia no alto, os blocos NC que existem naquele
 nível, e em cada série a zona, o intervalo, a PSE e o corretivo com a dica.
@@ -16,7 +21,9 @@ nível, e em cada série a zona, o intervalo, a PSE e o corretivo com a dica.
 from datetime import date
 from pathlib import Path
 
+import cartao_aa
 import gerar_card as base
+import programa_aa as aa
 import programa_nc as nc
 
 esc = base.esc
@@ -95,13 +102,14 @@ def bloco_html(nivel: dict, bloco: str, compacto: bool) -> str:
         f'</div>')
 
 
-def slide_treino(t: dict, chave: str, dados: dict, quando: date, logo, compacto: bool = False) -> str:
+def slide_treino(t: dict, chave: str, dados: dict, quando: date, logo, compacto: bool = False,
+                 regua: str = "Treino do dia") -> str:
     n = t["niveis"][chave]
     r = dados["rotulos"][chave]
     total = nc.total_do_nivel(n)
     miolo = (
         base.cabecalho_html(logo)
-        + '<div class="regua">Treino do dia</div>'
+        + f'<div class="regua">{esc(regua)}</div>'
         + base.chips_html(quando, t["foco"])
         + f'<div class="tarja" style="--cor:{r["cor"]}">'
           f'  <div class="bolinha"></div>'
@@ -118,7 +126,7 @@ def slide_treino(t: dict, chave: str, dados: dict, quando: date, logo, compacto:
     return pagina(miolo, quando)
 
 
-def slide_capa(t: dict, dados: dict, quando: date, logo) -> str:
+def slide_capa(t: dict, dados: dict, quando: date, logo, aguas: tuple | None = None) -> str:
     opcoes = []
     for chave in nc.NIVEIS:
         r, n = dados["rotulos"][chave], t["niveis"][chave]
@@ -130,6 +138,18 @@ def slide_capa(t: dict, dados: dict, quando: date, logo) -> str:
             f'    <div class="op-sub">{chip_zona(n["zona"])} {nc.total_do_nivel(n)}m · ~{nc.minutos(n, chave)} min</div>'
             f'  </div>'
             f'</div>')
+    if aguas:
+        dados_aa, t_aa = aguas
+        opcoes.append(
+            '<div class="opcao aguas" style="--cor:#5FC9FF">'
+            '  <div class="bolinha"></div>'
+            '  <div class="op-txt">'
+            '    <div class="op-nome">Águas abertas</div>'
+            f'    <div class="op-sub">{esc(t_aa["foco"])} · '
+            + " · ".join(f'{aa.total_do_nivel(t_aa["niveis"][c])}m' for c in aa.NIVEIS)
+            + ' · nos slides 5 e 6</div>'
+            '  </div>'
+            '</div>')
     miolo = (
         base.cabecalho_html(logo)
         + '<div class="regua">Escolha seu nível</div>'
@@ -145,11 +165,16 @@ def slide_capa(t: dict, dados: dict, quando: date, logo) -> str:
     return pagina(miolo, quando)
 
 
-def slide_glossario(dados: dict, quando: date, logo) -> str:
+def slide_glossario(dados: dict, quando: date, logo, dados_aa: dict | None = None) -> str:
+    # Com águas abertas, entram sighting e segurança; o "Sentiu dor?" do corretivo
+    # continua valendo, e a virada sem impulsão já vem explicada no slide do treino.
+    termos = list(dados["glossario"])
+    if dados_aa:
+        termos += [g for g in dados_aa["glossario"] if g["termo"] != "VIRADA SEM IMPULSÃO"]
     itens = "".join(
         f'<div class="verbete"><div class="termo">{esc(g["termo"])}</div>'
         f'<div class="texto">{esc(g["texto"])}</div></div>'
-        for g in dados["glossario"])
+        for g in termos)
     zonas = " ".join(chip_zona(z) for z in nc.ZONAS)
     miolo = (
         base.cabecalho_html(logo)
@@ -206,20 +231,34 @@ def gerar(quando: date, dados: dict, navegador, so_slide: int | None = None) -> 
     logo = base.logo_uri()
     base.SAIDA.mkdir(exist_ok=True)
     prefixo = quando.isoformat()
+    aguas = aguas_da_data(quando)
+    dados_aa = aguas[0] if aguas else None
 
     receitas = [
-        ("1-capa", lambda c: slide_capa(t, dados, quando, logo)),
+        ("1-capa", lambda c: slide_capa(t, dados, quando, logo, aguas)),
         ("2-verde", lambda c: slide_treino(t, "verde", dados, quando, logo, c)),
         ("3-amarelo", lambda c: slide_treino(t, "amarelo", dados, quando, logo, c)),
         ("4-vermelho", lambda c: slide_treino(t, "vermelho", dados, quando, logo, c)),
-        ("5-glossario", lambda c: slide_glossario(dados, quando, logo)),
     ]
+    if aguas:
+        t_aa = aguas[1]
+        receitas += [
+            ("5-aguas-amarelo", lambda c: cartao_aa.slide(t_aa, "amarelo", dados_aa, quando, c)),
+            ("6-aguas-vermelho", lambda c: cartao_aa.slide(t_aa, "vermelho", dados_aa, quando, c)),
+        ]
+    receitas.append((f"{len(receitas) + 1}-glossario", lambda c: slide_glossario(dados, quando, logo, dados_aa)))
 
     feitos = []
     for i, (nome, faz) in enumerate(receitas, start=1):
         if so_slide and i != so_slide:
             continue
         destino = base.SAIDA / f"{prefixo}_{nome}.jpg"
+        if "aguas" in nome:
+            # Arte de águas abertas: texto nos espaços da arte, com ajuste próprio.
+            fs, compacto = cartao_aa.render(faz, destino, navegador), False
+            print(f"  {destino.name}  (menor texto {fs}px)")
+            feitos.append(destino)
+            continue
         fs, compacto = base.render(faz, destino, navegador)
         aviso = "  [compacto]" if compacto else ""
         if fs < base.MIN_LEGIVEL:
@@ -232,6 +271,22 @@ def gerar(quando: date, dados: dict, navegador, so_slide: int | None = None) -> 
                             for n in nc.NIVEIS)
         print(f"  → dia {t['dia']}/{len(dados['treinos'])} · {t['mesociclo']} / {t['foco']} · {resumo}")
     return feitos
+
+
+def aguas_da_data(quando: date) -> tuple[dict, dict] | None:
+    """(dados, treino do dia) do modo Águas Abertas, ou None antes da âncora, sem o
+    arquivo ou com o programa inválido. Programa de águas abertas quebrado não
+    segura o post de piscina: sai o carrossel de sempre, com o aviso no log."""
+    if not aa.ARQUIVO.exists():
+        return None
+    dados = aa.carregar()
+    if quando < aa.ancora(dados):
+        return None
+    if erros := aa.validar(dados):
+        print(f"  ATENÇÃO: programa_aa.json inválido ({len(erros)} problema(s)); "
+              f"carrossel sai sem águas abertas. Rode scripts/programa_aa.py.")
+        return None
+    return dados, aa.treino_de(dados, quando)
 
 
 def programa_da_data(quando: date) -> tuple[dict, bool]:

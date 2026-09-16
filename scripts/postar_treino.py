@@ -24,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import cartao_nc     # noqa: E402
 import gerar_card    # noqa: E402
+import programa_aa   # noqa: E402
 import programa_nc   # noqa: E402
 import treino        # noqa: E402
 
@@ -122,7 +123,7 @@ SOBRE_O_MESOCICLO = {
 }
 
 
-def montar_legenda_nc(t: dict, dados: dict, quando: date) -> str:
+def montar_legenda_nc(t: dict, dados: dict, quando: date, aguas: tuple | None = None) -> str:
     rot = dados["rotulos"]
     dia_semana = gerar_card.DIAS_SEMANA[quando.weekday()]
     # Mesmo objetivo nos três níveis (dia de técnica, por exemplo) sai uma vez só.
@@ -137,6 +138,21 @@ def montar_legenda_nc(t: dict, dados: dict, quando: date) -> str:
     if um_so:
         niveis += f"\n\n🎯 Objetivo do dia: {objetivos[0]}"
 
+    # Modo Águas Abertas (slides 5 e 6), quando o programa existe e é válido.
+    trecho_aguas = ""
+    if aguas:
+        dados_aa, t_aa = aguas
+        rot_aa = dados_aa["rotulos"]
+        linhas = "\n".join(
+            f"{rot_aa[n]['emoji']} {rot_aa[n]['nome']}: {t_aa['niveis'][n]['zona']} · "
+            f"{programa_aa.total_do_nivel(t_aa['niveis'][n])}m · "
+            f"~{programa_aa.minutos(t_aa['niveis'][n], n)} min"
+            for n in programa_aa.NIVEIS)
+        trecho_aguas = (
+            f"🌊 Águas abertas — {t_aa['foco']} ({t_aa['habilidade'].lower()}):\n"
+            f"{linhas}\n"
+            f"No mar ou no lago, nunca nade sozinho: apoio, boia de sinalização e rota definida.\n\n")
+
     return (
         f"🏊 Qual é o seu nível hoje?\n\n"
         f"{dia_semana}, {quando.strftime('%d/%m')} — foco em {t['foco']}. "
@@ -144,6 +160,7 @@ def montar_legenda_nc(t: dict, dados: dict, quando: date) -> str:
         f"No Cada Dia, 1 Treino não queremos apenas somar metros. Cada bloco tem um "
         f"propósito: Ativação → Preparação → Desenvolvimento → Consolidação → Recuperação.\n\n"
         f"Escolha seu nível:\n{niveis}\n\n"
+        f"{trecho_aguas}"
         f"📌 Como ler: A0 a A3, AN e AA são as zonas de intensidade; PSE é o esforço de 0 a 10; "
         f"#20\" é descanso de 20 s e @ é saída com tempo fixo.\n\n"
         f"{SOBRE_O_MESOCICLO.get(t['mesociclo'], '')}\n\n"
@@ -281,7 +298,8 @@ def main() -> int:
         slides = gerar_card.gerar(quando, dados, nav)
         nav.close()
 
-    legenda = montar_legenda_nc(t, dados, quando) if e_nc else montar_legenda(t, dados, quando)
+    legenda = (montar_legenda_nc(t, dados, quando, cartao_nc.aguas_da_data(quando)) if e_nc
+               else montar_legenda(t, dados, quando))
     print(f"\nLegenda ({len(legenda)} caracteres):\n{'-'*60}\n{legenda}\n{'-'*60}\n")
 
     cmd = [sys.executable, str(RAIZ / "scripts" / "publish_instagram.py"),
