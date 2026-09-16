@@ -1,5 +1,9 @@
 # Disparo diário pelo n8n
 
+> **Substituído em 16/09/2026** pelo agendamento no Supabase: veja
+> `supabase/disparo-diario.sql`. Este fluxo fica só como referência; deixe-o
+> desligado no n8n.
+
 ## Por que existe
 
 O `schedule` do GitHub Actions não cumpre horário. Em repositório público no
