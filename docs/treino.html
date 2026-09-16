@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Treino da Natação Criativa</title>
+  <!--
+    Link de treino compartilhado pelo app Natação Criativa:
+    https://nicevargas.github.io/natacao-treinos/treino.html#<código>
+    A página não busca nada: só abre o app no treino (natacaocriativa://treino/<código>).
+    O treino completo já vai escrito na mensagem do WhatsApp.
+  -->
+  <style>
+    :root { color-scheme: light; --azul: #0076D1; --magenta: #E30071; --texto: #111C2D; --suave: #536071; --borda: #E2EBF5; --fundo: #F8FAFF; }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: var(--fundo); color: var(--texto); }
+    main { max-width: 480px; margin: 0 auto; padding: 28px 16px 40px; text-align: center; }
+    img { width: 220px; max-width: 70%; height: auto; }
+    h1 { font-size: 1.45rem; margin: 20px 0 6px; }
+    p { color: var(--suave); line-height: 1.5; margin: 0 0 14px; }
+    .codigo { display: inline-block; font: 700 1.4rem ui-monospace, monospace; letter-spacing: .12em; background: #fff; border: 1px solid var(--borda); border-radius: 12px; padding: 10px 16px; margin: 6px 0 18px; }
+    a.botao, button { display: block; width: 100%; border: 0; border-radius: 14px; font: 700 1.05rem system-ui, sans-serif; padding: 15px; text-decoration: none; cursor: pointer; }
+    a.botao { background: linear-gradient(90deg, var(--azul), var(--magenta)); color: #fff; margin-bottom: 10px; }
+    button { background: #fff; color: var(--texto); border: 1px solid var(--borda); }
+    ol { text-align: left; color: var(--suave); line-height: 1.6; padding-left: 20px; margin-top: 22px; }
+    #status { min-height: 1.4em; margin-top: 10px; color: var(--azul); }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="logo.png" alt="Natação Criativa">
+    <div id="valido" hidden>
+      <h1>Você recebeu um treino de natação</h1>
+      <p>Toque em <b>Abrir no app</b> para ver o treino e nadar. Quando você concluir, ele fica salvo em Meus treinos.</p>
+      <div class="codigo" id="codigo"></div>
+      <a class="botao" id="abrir" href="#">Abrir no app Natação Criativa</a>
+      <button id="copiar" type="button">Copiar código</button>
+      <p id="status" role="status" aria-live="polite"></p>
+      <ol>
+        <li>O app não abriu? No app, vá em <b>Meus treinos</b> e toque em <b>Recebeu um treino?</b>.</li>
+        <li>Cole o código acima (ou a mensagem inteira) e toque em <b>Abrir</b>.</li>
+      </ol>
+    </div>
+    <div id="invalido" hidden>
+      <h1>Link de treino incompleto</h1>
+      <p>Abra o link completo que veio na mensagem, ou peça para a pessoa compartilhar o treino de novo.</p>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var codigo = (location.hash.slice(1) || '').trim().toLowerCase();
+      if (!/^[a-f0-9]{10}$/.test(codigo)) {
+        document.getElementById('invalido').hidden = false;
+        return;
+      }
+      document.getElementById('valido').hidden = false;
+      document.getElementById('codigo').textContent = codigo;
+      var app = 'natacaocriativa://treino/' + codigo;
+      // No Android, o intent abre o app direto; sem o app, volta para esta página.
+      var android = /android/i.test(navigator.userAgent);
+      document.getElementById('abrir').href = android
+        ? 'intent://treino/' + codigo + '#Intent;scheme=natacaocriativa;package=com.aistudio.aquagenda.swmact;S.browser_fallback_url=' + encodeURIComponent(location.href) + ';end'
+        : app;
+      document.getElementById('copiar').addEventListener('click', function () {
+        var status = document.getElementById('status');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(codigo).then(function () { status.textContent = 'Código copiado.'; },
+            function () { status.textContent = 'Segure o dedo no código para copiar.'; });
+        } else {
+          status.textContent = 'Segure o dedo no código para copiar.';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
