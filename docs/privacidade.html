@@ -4,236 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Política de Privacidade — Natação Criativa</title>
-<meta name="description" content="Política de Privacidade do aplicativo Natação Criativa, em conformidade com a LGPD.">
+<!--
+  A política mora no domínio próprio; o texto-fonte está no repositório do app
+  (aquatreinos, docs/privacidade.html). Esta cópia só redireciona, para não
+  existirem duas versões. O GitHub Pages não redireciona no servidor: o script
+  leva junto a âncora (#exclusao), e o meta refresh cobre quem está sem JavaScript.
+-->
+<link rel="canonical" href="https://treinos.natacaocriativa.com.br/privacidade.html">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=https://treinos.natacaocriativa.com.br/privacidade.html">
+<script>
+  location.replace("https://treinos.natacaocriativa.com.br/privacidade.html" + location.hash);
+</script>
 <style>
-  :root{
-    --bg:#ffffff; --fg:#1a1c1e; --muted:#5b6268; --line:#e3e6e8;
-    --accent:#0b6fb8; --card:#f6f8f9;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#14171a; --fg:#e8eaec; --muted:#a3abb2; --line:#2b3034;
-      --accent:#5ab2ec; --card:#1b1f23;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#14171a; --fg:#e8eaec; --muted:#a3abb2; --line:#2b3034;
-    --accent:#5ab2ec; --card:#1b1f23;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--fg);
-    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-text-size-adjust:100%;
-  }
-  .wrap{max-width:760px; margin:0 auto; padding:48px 16px 80px}
-  header{border-bottom:1px solid var(--line); padding-bottom:24px; margin-bottom:8px}
-  h1{font-size:1.9rem; line-height:1.2; margin:0 0 8px; letter-spacing:-.01em}
-  .sub{color:var(--muted); font-size:.95rem; margin:0}
-  h2{font-size:1.15rem; margin:40px 0 10px; letter-spacing:-.005em}
-  h3{font-size:1rem; margin:24px 0 6px}
-  p{margin:0 0 14px}
-  ul{margin:0 0 14px; padding-left:22px}
-  li{margin:6px 0}
-  a{color:var(--accent)}
-  .card{
-    background:var(--card); border:1px solid var(--line);
-    border-radius:10px; padding:18px 20px; margin:20px 0;
-  }
-  .card p:last-child,.card ul:last-child{margin-bottom:0}
-  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:.95rem}
-  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
-  th{font-weight:600; color:var(--muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.03em}
-  footer{margin-top:56px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem}
-  @media print{ body{background:#fff;color:#000} .card{background:#fff} }
+  body { margin: 0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         background: #fff; color: #1a1c1e; }
+  p { max-width: 640px; margin: 48px auto; padding: 0 16px; }
+  a { color: #0b6fb8; }
+  @media (prefers-color-scheme: dark) { body { background: #14171a; color: #e8eaec; } a { color: #5ab2ec; } }
 </style>
 </head>
 <body>
-<div class="wrap">
-
-<header>
-  <h1>Política de Privacidade</h1>
-  <p class="sub">Aplicativo <strong>Natação Criativa</strong> · Última atualização: 19 de setembro de 2026</p>
-</header>
-
-<p>Esta Política descreve como o aplicativo <strong>Natação Criativa</strong> coleta, usa, armazena e protege os dados pessoais de seus usuários, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).</p>
-
-<p>Ao criar uma conta e utilizar o aplicativo, você declara ter lido e compreendido esta Política.</p>
-
-<h2>1. Quem é responsável pelos seus dados</h2>
-
-<p>O controlador dos dados pessoais tratados no aplicativo é:</p>
-
-<div class="card">
-  <p><strong>Eunice Luciano Vargas</strong> (Curta Tchê)<br>
-  Contato para assuntos de privacidade: <a href="mailto:suporte@curtatche.com.br">suporte@curtatche.com.br</a></p>
-</div>
-
-<h2>2. Quais dados coletamos</h2>
-
-<p>Coletamos apenas o necessário para que o aplicativo funcione. Não coletamos mais do que está listado abaixo.</p>
-
-<table>
-  <thead>
-    <tr><th>Dado</th><th>Finalidade</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Nome</strong></td>
-      <td>Identificar você dentro do aplicativo e personalizar a experiência.</td>
-    </tr>
-    <tr>
-      <td><strong>Endereço de e-mail</strong></td>
-      <td>Criar e acessar sua conta, recuperar senha e enviar comunicações essenciais sobre o serviço.</td>
-    </tr>
-    <tr>
-      <td><strong>Senha</strong></td>
-      <td>Proteger o acesso à sua conta. A senha é armazenada de forma criptografada e não é acessível a nós em texto legível.</td>
-    </tr>
-    <tr>
-      <td><strong>Dados de treino</strong><br><span class="sub">Séries, distâncias, tempos, frequência e histórico de sessões</span></td>
-      <td>Registrar sua evolução, exibir seu histórico e permitir o acompanhamento dos treinos.</td>
-    </tr>
-    <tr>
-      <td><strong>Perfil de treino</strong><br><span class="sub">Nível (iniciante, intermediário ou avançado) e tamanho da piscina</span></td>
-      <td>Sugerir treinos adequados ao seu nível e calcular as distâncias.</td>
-    </tr>
-    <tr>
-      <td><strong>Percepção de esforço</strong><br><span class="sub">Nota de intensidade e de complexidade (0 a 10) ao fim de cada treino</span></td>
-      <td>Acompanhar como cada treino foi sentido e ajustar os próximos.</td>
-    </tr>
-    <tr>
-      <td><strong>Questionário PAR-Q</strong><br><span class="sub">Respostas às 7 perguntas de prontidão para atividade física e aceite da declaração e do termo de responsabilidade</span></td>
-      <td>Verificar se você está apto a treinar e guardar o registro da sua declaração. São dados de saúde: veja a seção 3.</td>
-    </tr>
-    <tr>
-      <td><strong>Dados do ranking</strong> <span class="sub">(opcionais)</span><br><span class="sub">Nome de exibição, ano de nascimento, sexo, cidade e local onde nada</span></td>
-      <td>Só se você escolher participar do ranking: exibir sua posição e permitir filtrar por faixa de idade, sexo, cidade e local.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3>O que NÃO coletamos</h3>
-<ul>
-  <li>Não coletamos medidas corporais, peso, altura ou frequência cardíaca. Os únicos dados de saúde são as respostas do PAR-Q, descritas acima.</li>
-  <li>Não coletamos a localização do aparelho (GPS). Cidade e local onde nada são opcionais e digitados por você, só para o ranking.</li>
-  <li>Não acessamos sua câmera, seus contatos, seus arquivos ou suas fotos.</li>
-  <li>Não coletamos dados de pagamento — o aplicativo não realiza cobranças nem compras dentro do app.</li>
-  <li>Não exibimos anúncios e não utilizamos ferramentas de publicidade ou rastreamento para fins comerciais.</li>
-  <li>Não vendemos, alugamos ou comercializamos dados pessoais sob nenhuma circunstância.</li>
-</ul>
-
-<h2>3. Base legal para o tratamento</h2>
-
-<p>Tratamos seus dados pessoais com fundamento nas seguintes hipóteses legais previstas no artigo 7º da LGPD:</p>
-
-<ul>
-  <li><strong>Execução de contrato</strong> (art. 7º, V) — os dados de conta e de treino são indispensáveis para prestar o serviço que você contratou ao se cadastrar.</li>
-  <li><strong>Cumprimento de obrigação legal ou regulatória</strong> (art. 7º, II) — quando a retenção de determinados registros for exigida por lei.</li>
-  <li><strong>Consentimento específico e destacado</strong> (art. 11, I) — para as respostas do PAR-Q, que são dados pessoais sensíveis (saúde). Você consente ao responder o questionário e aceitar a declaração, e pode revogar excluindo a conta.</li>
-  <li><strong>Consentimento</strong> (art. 7º, I) — para os dados opcionais do ranking, que só são usados se você escolher participar.</li>
-  <li><strong>Consentimento</strong> (art. 7º, I) — para qualquer tratamento que venha a extrapolar as finalidades descritas nesta Política, hipótese em que solicitaremos sua autorização de forma prévia e específica.</li>
-</ul>
-
-<h2>4. Com quem compartilhamos</h2>
-
-<p>Não compartilhamos seus dados pessoais com terceiros para fins comerciais, publicitários ou de qualquer outra natureza alheia ao funcionamento do aplicativo.</p>
-
-<p>Utilizamos um único prestador de serviço, que atua como <strong>operador</strong> nos termos da LGPD:</p>
-
-<div class="card">
-  <p><strong>Supabase</strong> — plataforma de autenticação e banco de dados que hospeda sua conta e seus registros de treino. O Supabase processa os dados exclusivamente sob nossas instruções e não os utiliza para finalidades próprias.</p>
-  <p>Política de privacidade do fornecedor: <a href="https://supabase.com/privacy" target="_blank" rel="noopener noreferrer">supabase.com/privacy</a></p>
-</div>
-
-<h3>O que outros usuários do aplicativo podem ver</h3>
-<ul>
-  <li><strong>Ranking (opcional):</strong> se você escolher participar, outros usuários veem o nome de exibição que você definir, seus pontos, metros nadados, número de treinos e semanas ativas. Ano de nascimento, sexo, cidade e local servem só como filtro e não são exibidos. E-mail, percepção de esforço e respostas do PAR-Q nunca aparecem. Você pode sair do ranking a qualquer momento.</li>
-  <li><strong>Treino compartilhado:</strong> quando você compartilha um treino, quem abrir o link vê o treino e o seu primeiro nome.</li>
-</ul>
-
-<p>Podemos ainda divulgar dados quando houver requisição de autoridade competente, ordem judicial ou obrigação legal, sempre nos limites estritos do que for determinado.</p>
-
-<h3>Transferência internacional de dados</h3>
-
-<p>A infraestrutura do Supabase pode estar localizada fora do Brasil. Nesses casos, a transferência internacional ocorre em conformidade com os artigos 33 e seguintes da LGPD, amparada em cláusulas contratuais e garantias de proteção oferecidas pelo fornecedor, que mantém padrões de segurança compatíveis com a legislação brasileira.</p>
-
-<h2>5. Por quanto tempo guardamos</h2>
-
-<p>Mantemos seus dados pessoais enquanto sua conta estiver ativa. Após a solicitação de exclusão, os dados são apagados conforme descrito na seção 7.</p>
-
-<p>Registros que precisem ser preservados por obrigação legal são mantidos apenas pelo prazo exigido e, findo esse período, eliminados de forma definitiva.</p>
-
-<h2>6. Seus direitos</h2>
-
-<p>A LGPD garante a você, a qualquer momento e sem custo, os seguintes direitos sobre seus dados pessoais:</p>
-
-<ul>
-  <li><strong>Confirmação e acesso</strong> — saber se tratamos seus dados e obter cópia deles.</li>
-  <li><strong>Correção</strong> — atualizar dados incompletos, inexatos ou desatualizados.</li>
-  <li><strong>Anonimização, bloqueio ou eliminação</strong> — de dados desnecessários, excessivos ou tratados em desconformidade com a lei.</li>
-  <li><strong>Portabilidade</strong> — receber seus dados em formato estruturado e de uso comum.</li>
-  <li><strong>Eliminação</strong> — solicitar a exclusão dos dados tratados com base no seu consentimento.</li>
-  <li><strong>Informação sobre compartilhamento</strong> — saber com quais entidades compartilhamos seus dados.</li>
-  <li><strong>Revogação do consentimento</strong> — retirar, a qualquer tempo, autorização anteriormente concedida.</li>
-  <li><strong>Oposição</strong> — opor-se a tratamento que considere irregular.</li>
-</ul>
-
-<p>Para exercer qualquer um desses direitos, escreva para <a href="mailto:suporte@curtatche.com.br">suporte@curtatche.com.br</a>. Responderemos no prazo legal.</p>
-
-<h2 id="exclusao">7. Exclusão da conta e dos dados</h2>
-
-<div class="card">
-  <p>Você pode solicitar a exclusão da sua conta e de todos os dados associados a ela a qualquer momento, por qualquer um dos caminhos abaixo:</p>
-  <ul>
-    <li><strong>Pelo aplicativo:</strong> na aba <em>Perfil</em>, toque em <em>Excluir minha conta</em>, no fim do cartão com seu nome, e confirme em <em>Excluir conta</em>. A conta e os dados são apagados na hora.</li>
-    <li><strong>Por e-mail:</strong> envie a solicitação para <a href="mailto:suporte@curtatche.com.br">suporte@curtatche.com.br</a>, a partir do endereço de e-mail cadastrado na conta.</li>
-  </ul>
-  <p><strong>O que é excluído:</strong> seu nome, endereço de e-mail, credenciais de acesso e todo o seu histórico de treinos.</p>
-  <p><strong>Prazo:</strong> a exclusão é processada em até 30 dias corridos a partir da solicitação. Nenhuma cópia de backup é mantida por mais de 90 dias após esse processamento.</p>
-  <p><strong>Importante:</strong> a exclusão é permanente e irreversível. Não é possível recuperar o histórico de treinos depois de concluída.</p>
-</div>
-
-<h2>8. Segurança</h2>
-
-<p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acesso não autorizado, perda, alteração ou divulgação indevida. Entre elas:</p>
-
-<ul>
-  <li>Transmissão de dados criptografada (HTTPS/TLS) entre o aplicativo e nossos servidores.</li>
-  <li>Senhas armazenadas com algoritmo de hash, nunca em texto legível.</li>
-  <li>Controle de acesso restrito aos dados, limitado ao necessário para operar e dar suporte ao serviço.</li>
-  <li>Isolamento dos registros por usuário, de modo que cada pessoa acesse apenas os próprios dados, exceto o que ela mesma decide mostrar no ranking ou ao compartilhar um treino.</li>
-</ul>
-
-<p>Nenhum sistema é totalmente imune a incidentes. Caso ocorra um incidente de segurança que possa acarretar risco ou dano relevante a você, comunicaremos o fato a você e à Autoridade Nacional de Proteção de Dados (ANPD), conforme o artigo 48 da LGPD.</p>
-
-<h2>9. Público do aplicativo</h2>
-
-<p>O <strong>Natação Criativa</strong> é destinado a pessoas maiores de 18 anos. Não coletamos intencionalmente dados de crianças ou adolescentes.</p>
-
-<p>Caso identifiquemos que uma conta foi criada por menor de idade sem a devida autorização, os dados serão excluídos. Se você é responsável legal e acredita que um menor sob sua responsabilidade forneceu dados ao aplicativo, entre em contato pelo e-mail acima para que providenciemos a remoção.</p>
-
-<h2>10. Alterações nesta Política</h2>
-
-<p>Esta Política pode ser atualizada para refletir mudanças no aplicativo ou na legislação. A data da última atualização está indicada no topo desta página.</p>
-
-<p>Alterações relevantes — especialmente as que ampliem a coleta de dados ou modifiquem finalidades — serão comunicadas pelo aplicativo ou por e-mail antes de entrarem em vigor.</p>
-
-<h2>11. Contato</h2>
-
-<p>Dúvidas, solicitações ou reclamações sobre privacidade e proteção de dados:</p>
-
-<div class="card">
-  <p><strong>E-mail:</strong> <a href="mailto:suporte@curtatche.com.br">suporte@curtatche.com.br</a><br>
-  <strong>Responsável:</strong> Eunice Luciano Vargas</p>
-</div>
-
-<p>Você também pode apresentar reclamação diretamente à Autoridade Nacional de Proteção de Dados (ANPD), por meio do site <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">gov.br/anpd</a>.</p>
-
-<footer>
-  <p>Natação Criativa — Política de Privacidade · Vigente a partir de 19 de setembro de 2026</p>
-</footer>
-
-</div>
+<p>A Política de Privacidade do Natação Criativa está em
+<a href="https://treinos.natacaocriativa.com.br/privacidade.html">treinos.natacaocriativa.com.br/privacidade.html</a></p>
 </body>
 </html>
