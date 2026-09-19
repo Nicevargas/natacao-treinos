@@ -254,5 +254,19 @@
       "2026-09-18_6-aguas-vermelho.jpg",
       "2026-09-18_7-glossario.jpg"
     ]
+  },
+  "2026-09-19": {
+    "dia_do_ciclo": 5,
+    "bloco": "Base",
+    "foco": "Ritmo",
+    "slides": [
+      "2026-09-19_1-capa.jpg",
+      "2026-09-19_2-verde.jpg",
+      "2026-09-19_3-amarelo.jpg",
+      "2026-09-19_4-vermelho.jpg",
+      "2026-09-19_5-aguas-amarelo.jpg",
+      "2026-09-19_6-aguas-vermelho.jpg",
+      "2026-09-19_7-glossario.jpg"
+    ]
   }
 }
