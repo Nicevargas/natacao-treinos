@@ -282,5 +282,19 @@
       "2026-09-20_6-aguas-vermelho.jpg",
       "2026-09-20_7-glossario.jpg"
     ]
+  },
+  "2026-09-21": {
+    "dia_do_ciclo": 7,
+    "bloco": "Base",
+    "foco": "Recuperação",
+    "slides": [
+      "2026-09-21_1-capa.jpg",
+      "2026-09-21_2-verde.jpg",
+      "2026-09-21_3-amarelo.jpg",
+      "2026-09-21_4-vermelho.jpg",
+      "2026-09-21_5-aguas-amarelo.jpg",
+      "2026-09-21_6-aguas-vermelho.jpg",
+      "2026-09-21_7-glossario.jpg"
+    ]
   }
 }
