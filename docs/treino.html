@@ -71,7 +71,7 @@
       // No Android, o intent abre o app direto; sem o app, volta para esta página.
       var android = /android/i.test(navigator.userAgent);
       document.getElementById('abrir').href = android
-        ? 'intent://treino/' + codigo + '#Intent;scheme=natacaocriativa;package=com.aistudio.aquagenda.swmact;S.browser_fallback_url=' + encodeURIComponent(location.href) + ';end'
+        ? 'intent://treino/' + codigo + '#Intent;scheme=natacaocriativa;package=com.natacaocriativa.treinos;S.browser_fallback_url=' + encodeURIComponent(location.href) + ';end'
         : app;
       document.getElementById('copiar').addEventListener('click', function () {
         var status = document.getElementById('status');
