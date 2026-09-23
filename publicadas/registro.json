@@ -310,5 +310,19 @@
       "2026-09-22_6-aguas-vermelho.jpg",
       "2026-09-22_7-glossario.jpg"
     ]
+  },
+  "2026-09-23": {
+    "dia_do_ciclo": 9,
+    "bloco": "Construção",
+    "foco": "Resistência",
+    "slides": [
+      "2026-09-23_1-capa.jpg",
+      "2026-09-23_2-verde.jpg",
+      "2026-09-23_3-amarelo.jpg",
+      "2026-09-23_4-vermelho.jpg",
+      "2026-09-23_5-aguas-amarelo.jpg",
+      "2026-09-23_6-aguas-vermelho.jpg",
+      "2026-09-23_7-glossario.jpg"
+    ]
   }
 }
