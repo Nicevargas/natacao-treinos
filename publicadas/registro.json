@@ -324,5 +324,19 @@
       "2026-09-23_6-aguas-vermelho.jpg",
       "2026-09-23_7-glossario.jpg"
     ]
+  },
+  "2026-09-24": {
+    "dia_do_ciclo": 10,
+    "bloco": "Construção",
+    "foco": "Velocidade",
+    "slides": [
+      "2026-09-24_1-capa.jpg",
+      "2026-09-24_2-verde.jpg",
+      "2026-09-24_3-amarelo.jpg",
+      "2026-09-24_4-vermelho.jpg",
+      "2026-09-24_5-aguas-amarelo.jpg",
+      "2026-09-24_6-aguas-vermelho.jpg",
+      "2026-09-24_7-glossario.jpg"
+    ]
   }
 }
