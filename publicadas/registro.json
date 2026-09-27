@@ -366,5 +366,19 @@
       "2026-09-26_6-aguas-vermelho.jpg",
       "2026-09-26_7-glossario.jpg"
     ]
+  },
+  "2026-09-27": {
+    "dia_do_ciclo": 13,
+    "bloco": "Construção",
+    "foco": "Força específica",
+    "slides": [
+      "2026-09-27_1-capa.jpg",
+      "2026-09-27_2-verde.jpg",
+      "2026-09-27_3-amarelo.jpg",
+      "2026-09-27_4-vermelho.jpg",
+      "2026-09-27_5-aguas-amarelo.jpg",
+      "2026-09-27_6-aguas-vermelho.jpg",
+      "2026-09-27_7-glossario.jpg"
+    ]
   }
 }
