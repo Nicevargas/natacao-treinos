@@ -408,5 +408,19 @@
       "2026-09-29_6-aguas-vermelho.jpg",
       "2026-09-29_7-glossario.jpg"
     ]
+  },
+  "2026-09-30": {
+    "dia_do_ciclo": 16,
+    "bloco": "Pico",
+    "foco": "Resistência",
+    "slides": [
+      "2026-09-30_1-capa.jpg",
+      "2026-09-30_2-verde.jpg",
+      "2026-09-30_3-amarelo.jpg",
+      "2026-09-30_4-vermelho.jpg",
+      "2026-09-30_5-aguas-amarelo.jpg",
+      "2026-09-30_6-aguas-vermelho.jpg",
+      "2026-09-30_7-glossario.jpg"
+    ]
   }
 }
