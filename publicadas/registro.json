@@ -464,5 +464,19 @@
       "2026-10-03_6-aguas-vermelho.jpg",
       "2026-10-03_7-glossario.jpg"
     ]
+  },
+  "2026-10-04": {
+    "dia_do_ciclo": 20,
+    "bloco": "Pico",
+    "foco": "Força específica",
+    "slides": [
+      "2026-10-04_1-capa.jpg",
+      "2026-10-04_2-verde.jpg",
+      "2026-10-04_3-amarelo.jpg",
+      "2026-10-04_4-vermelho.jpg",
+      "2026-10-04_5-aguas-amarelo.jpg",
+      "2026-10-04_6-aguas-vermelho.jpg",
+      "2026-10-04_7-glossario.jpg"
+    ]
   }
 }
