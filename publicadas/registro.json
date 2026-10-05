@@ -478,5 +478,19 @@
       "2026-10-04_6-aguas-vermelho.jpg",
       "2026-10-04_7-glossario.jpg"
     ]
+  },
+  "2026-10-05": {
+    "dia_do_ciclo": 21,
+    "bloco": "Pico",
+    "foco": "Recuperação",
+    "slides": [
+      "2026-10-05_1-capa.jpg",
+      "2026-10-05_2-verde.jpg",
+      "2026-10-05_3-amarelo.jpg",
+      "2026-10-05_4-vermelho.jpg",
+      "2026-10-05_5-aguas-amarelo.jpg",
+      "2026-10-05_6-aguas-vermelho.jpg",
+      "2026-10-05_7-glossario.jpg"
+    ]
   }
 }
