@@ -520,5 +520,19 @@
       "2026-10-07_6-aguas-vermelho.jpg",
       "2026-10-07_7-glossario.jpg"
     ]
+  },
+  "2026-10-08": {
+    "dia_do_ciclo": 24,
+    "bloco": "Regeneração",
+    "foco": "Velocidade",
+    "slides": [
+      "2026-10-08_1-capa.jpg",
+      "2026-10-08_2-verde.jpg",
+      "2026-10-08_3-amarelo.jpg",
+      "2026-10-08_4-vermelho.jpg",
+      "2026-10-08_5-aguas-amarelo.jpg",
+      "2026-10-08_6-aguas-vermelho.jpg",
+      "2026-10-08_7-glossario.jpg"
+    ]
   }
 }
