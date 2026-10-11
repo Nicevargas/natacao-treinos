@@ -562,5 +562,19 @@
       "2026-10-10_6-aguas-vermelho.jpg",
       "2026-10-10_7-glossario.jpg"
     ]
+  },
+  "2026-10-11": {
+    "dia_do_ciclo": 27,
+    "bloco": "Regeneração",
+    "foco": "Força específica",
+    "slides": [
+      "2026-10-11_1-capa.jpg",
+      "2026-10-11_2-verde.jpg",
+      "2026-10-11_3-amarelo.jpg",
+      "2026-10-11_4-vermelho.jpg",
+      "2026-10-11_5-aguas-amarelo.jpg",
+      "2026-10-11_6-aguas-vermelho.jpg",
+      "2026-10-11_7-glossario.jpg"
+    ]
   }
 }
