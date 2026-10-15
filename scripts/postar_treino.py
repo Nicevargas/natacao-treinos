@@ -22,6 +22,7 @@ import requests
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import cartao_app    # noqa: E402
 import cartao_nc     # noqa: E402
 import gerar_card    # noqa: E402
 import programa_aa   # noqa: E402
@@ -123,6 +124,18 @@ SOBRE_O_MESOCICLO = {
 }
 
 
+def chamada_do_app() -> str:
+    """Convite do slide do app. Só cita as lojas que estão no ar (lojas.json):
+    enquanto a App Store não abre, fala só do Android; quando abrir, entra o
+    iPhone sozinho. Sem loja nenhuma no ar, não há slide nem convite."""
+    lojas = cartao_app.lojas_no_ar()
+    if not lojas:
+        return ""
+    return (f"📲 Quer o treino do dia no celular, com cronômetro por série e plano de "
+            f"semanas? Comente EU QUERO que a gente te manda o link do app "
+            f"({cartao_app.sistemas(lojas)}) no direct.\n\n")
+
+
 def montar_legenda_nc(t: dict, dados: dict, quando: date, aguas: tuple | None = None) -> str:
     rot = dados["rotulos"]
     dia_semana = gerar_card.DIAS_SEMANA[quando.weekday()]
@@ -138,7 +151,7 @@ def montar_legenda_nc(t: dict, dados: dict, quando: date, aguas: tuple | None = 
     if um_so:
         niveis += f"\n\n🎯 Objetivo do dia: {objetivos[0]}"
 
-    # Modo Águas Abertas (slides 5 e 6), quando o programa existe e é válido.
+    # Modo Águas Abertas (slides 6 e 7), quando o programa existe e é válido.
     trecho_aguas = ""
     if aguas:
         dados_aa, t_aa = aguas
@@ -165,6 +178,7 @@ def montar_legenda_nc(t: dict, dados: dict, quando: date, aguas: tuple | None = 
         f"#20\" é descanso de 20 s e @ é saída com tempo fixo.\n\n"
         f"{SOBRE_O_MESOCICLO.get(t['mesociclo'], '')}\n\n"
         f"⚠️ Sentiu dor, tontura ou falta de ar incomum? Pare o treino.\n\n"
+        f"{chamada_do_app()}"
         f"🔥 Fez o treino? Marca {dados['handle']} e conta:\n"
         f"Intensidade: 0 a 10\n"
         f"Complexidade: 0 a 10\n\n"

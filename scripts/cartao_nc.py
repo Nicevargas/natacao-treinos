@@ -8,12 +8,13 @@ automático da fonte). Muda o miolo:
     2  verde       Pré-condicionamento
     3  amarelo     Condicionamento
     4  vermelho    Aperfeiçoamento
-    5  águas       Águas abertas, Condicionamento   (desde 17/09/2026, programa_aa.json)
-    6  águas       Águas abertas, Aperfeiçoamento
-    7  glossário   como ler: blocos, zonas e PSE, # e @, corretivo, sighting e segurança
+    5  app         propaganda do app, "comente EU QUERO"   (desde 15/10/2026, cartao_app.py)
+    6  águas       Águas abertas, Condicionamento   (desde 17/09/2026, programa_aa.json)
+    7  águas       Águas abertas, Aperfeiçoamento
+    8  glossário   como ler: blocos, zonas e PSE, # e @, corretivo, sighting e segurança
 
-Sem programa_aa.json válido, os slides de águas abertas não entram e o carrossel
-sai com os cinco de sempre.
+Sem programa_aa.json válido, os slides de águas abertas não entram. Sem nenhuma
+loja no ar (lojas.json), o slide do app não entra.
 
 Em cada treino: o objetivo do dia no alto, os blocos NC que existem naquele
 nível, e em cada série a zona, o intervalo, a PSE e o corretivo com a dica.
@@ -22,6 +23,7 @@ from datetime import date
 from pathlib import Path
 
 import cartao_aa
+import cartao_app
 import gerar_card as base
 import programa_aa as aa
 import programa_nc as nc
@@ -126,7 +128,8 @@ def slide_treino(t: dict, chave: str, dados: dict, quando: date, logo, compacto:
     return pagina(miolo, quando)
 
 
-def slide_capa(t: dict, dados: dict, quando: date, logo, aguas: tuple | None = None) -> str:
+def slide_capa(t: dict, dados: dict, quando: date, logo, aguas: tuple | None = None,
+               slides_aguas: str = "5 e 6") -> str:
     opcoes = []
     for chave in nc.NIVEIS:
         r, n = dados["rotulos"][chave], t["niveis"][chave]
@@ -147,7 +150,7 @@ def slide_capa(t: dict, dados: dict, quando: date, logo, aguas: tuple | None = N
             '    <div class="op-nome">Águas abertas</div>'
             f'    <div class="op-sub">{esc(t_aa["foco"])} · '
             + " · ".join(f'{aa.total_do_nivel(t_aa["niveis"][c])}m' for c in aa.NIVEIS)
-            + ' · nos slides 5 e 6</div>'
+            + f' · nos slides {slides_aguas}</div>'
             '  </div>'
             '</div>')
     miolo = (
@@ -234,17 +237,23 @@ def gerar(quando: date, dados: dict, navegador, so_slide: int | None = None) -> 
     aguas = aguas_da_data(quando)
     dados_aa = aguas[0] if aguas else None
 
+    lojas = cartao_app.lojas_no_ar()
+    primeiro_aa = 6 if lojas else 5
     receitas = [
-        ("1-capa", lambda c: slide_capa(t, dados, quando, logo, aguas)),
+        ("1-capa", lambda c: slide_capa(t, dados, quando, logo, aguas,
+                                        f"{primeiro_aa} e {primeiro_aa + 1}")),
         ("2-verde", lambda c: slide_treino(t, "verde", dados, quando, logo, c)),
         ("3-amarelo", lambda c: slide_treino(t, "amarelo", dados, quando, logo, c)),
         ("4-vermelho", lambda c: slide_treino(t, "vermelho", dados, quando, logo, c)),
     ]
+    # Propaganda do app entre a piscina e as águas abertas.
+    if lojas:
+        receitas.append(("5-app", lambda c: cartao_app.slide(dados, quando, logo, lojas, c)))
     if aguas:
         t_aa = aguas[1]
         receitas += [
-            ("5-aguas-amarelo", lambda c: cartao_aa.slide(t_aa, "amarelo", dados_aa, quando, c)),
-            ("6-aguas-vermelho", lambda c: cartao_aa.slide(t_aa, "vermelho", dados_aa, quando, c)),
+            (f"{primeiro_aa}-aguas-amarelo", lambda c: cartao_aa.slide(t_aa, "amarelo", dados_aa, quando, c)),
+            (f"{primeiro_aa + 1}-aguas-vermelho", lambda c: cartao_aa.slide(t_aa, "vermelho", dados_aa, quando, c)),
         ]
     receitas.append((f"{len(receitas) + 1}-glossario", lambda c: slide_glossario(dados, quando, logo, dados_aa)))
 

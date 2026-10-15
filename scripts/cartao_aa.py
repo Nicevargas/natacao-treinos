@@ -1,5 +1,5 @@
 """
-cartao_aa.py - Slides de ÁGUAS ABERTAS do carrossel (slides 5 e 6).
+cartao_aa.py - Slides de ÁGUAS ABERTAS do carrossel (slides 6 e 7; 5 e 6 sem o slide do app).
 
 A arte é da marca: marca/aguas_abertas_modelo.jpg ("1 Treino por dia", com o
 nadador no mar e sete espaços com ícone fixo, feita a partir da imagem da Nice de
