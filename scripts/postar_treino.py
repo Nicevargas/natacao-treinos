@@ -66,7 +66,9 @@ SOBRE_O_BLOCO = {
 }
 
 # Frase fixa da legenda, usada para reconhecer um post nosso no meio do feed.
-# Se ela mudar em montar_legenda(), tem que mudar aqui junto.
+# Se ela mudar em montar_legenda(), tem que mudar aqui junto -- e também em
+# "legenda_contem" no regras.json do robô EU QUERO (C:\Users\eunic\natacao-autoresposta),
+# que só responde nos posts que trazem esta frase.
 ASSINATURA = "Cada Dia, 1 Treino não queremos apenas somar metros"
 
 TAGS = ("#NatacaoCriativa #CadaDia1Treino #TreinoDeNatacao #Natacao "
