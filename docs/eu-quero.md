@@ -3,11 +3,13 @@
 Desde 15/10/2026 o carrossel tem o slide 5 (propaganda do app) e a legenda pede
 "Comente EU QUERO que a gente te manda o link do app no direct".
 
-## Hoje
+## Robô
 
-**A resposta é manual.** Quem cuida da @natacaocriativa responde no direct de
-quem comentou, com a mensagem abaixo. A Meta permite **uma** resposta privada
-até 7 dias depois do comentário.
+Desde 15/10/2026 há um robô só desta conta: `C:\Users\eunic\natacao-autoresposta`
+(Vercel `natacao-autoresposta`; guia em `COMO-FUNCIONA.md` lá dentro). Até ele
+estar ligado (token na Vercel, chave do app e webhook no painel da Meta), a
+resposta é manual, com a mensagem abaixo. A Meta permite **uma** resposta
+privada até 7 dias depois do comentário.
 
 ## Mensagem para copiar
 
@@ -23,20 +25,3 @@ até 7 dias depois do comentário.
 > série. Qualquer dúvida, responde aqui.
 
 Resposta pública no comentário: `Te chamei no direct! 👀 Se não achar, olha em Solicitações de mensagem 💙`
-
-## Para automatizar depois
-
-Já existe o robô que faz isso para a @nicevargas.mkt:
-`C:\Users\eunic\instagram-autoresposta` (webhook na Vercel). Ele atende **uma
-conta por instalação**, porque a conta vem do token. Para a @natacaocriativa:
-
-1. Outra instalação do mesmo código na Vercel, com o token da @natacaocriativa
-   (o mesmo segredo `INSTAGRAM_ACCESS_TOKEN` do carrossel).
-2. Webhook do campo `comments` no app da Meta `1584024343082090`
-   (`natacaocriativa`, portfólio do Renato), com a chave secreta do **app do
-   Instagram**, não a do Facebook.
-3. Uma regra em `regras.json` com as palavras `eu quero`, `quero`, `app`,
-   `link` e a mensagem acima nos dois campos (`mensagem_segue` e
-   `mensagem_nao_segue`): o link do app vai para todo mundo, siga ou não.
-
-O passo 2 depende de acesso de administrador ao app da Meta do portfólio do Renato.
