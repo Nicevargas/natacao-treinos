@@ -707,5 +707,20 @@
       "2026-10-20_7-aguas-vermelho.jpg",
       "2026-10-20_8-glossario.jpg"
     ]
+  },
+  "2026-10-21": {
+    "dia_do_ciclo": 9,
+    "bloco": "Construção",
+    "foco": "Resistência",
+    "slides": [
+      "2026-10-21_1-capa.jpg",
+      "2026-10-21_2-verde.jpg",
+      "2026-10-21_3-amarelo.jpg",
+      "2026-10-21_4-vermelho.jpg",
+      "2026-10-21_5-app.jpg",
+      "2026-10-21_6-aguas-amarelo.jpg",
+      "2026-10-21_7-aguas-vermelho.jpg",
+      "2026-10-21_8-glossario.jpg"
+    ]
   }
 }
