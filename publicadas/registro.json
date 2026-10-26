@@ -782,5 +782,20 @@
       "2026-10-25_7-aguas-vermelho.jpg",
       "2026-10-25_8-glossario.jpg"
     ]
+  },
+  "2026-10-26": {
+    "dia_do_ciclo": 14,
+    "bloco": "Construção",
+    "foco": "Recuperação",
+    "slides": [
+      "2026-10-26_1-capa.jpg",
+      "2026-10-26_2-verde.jpg",
+      "2026-10-26_3-amarelo.jpg",
+      "2026-10-26_4-vermelho.jpg",
+      "2026-10-26_5-app.jpg",
+      "2026-10-26_6-aguas-amarelo.jpg",
+      "2026-10-26_7-aguas-vermelho.jpg",
+      "2026-10-26_8-glossario.jpg"
+    ]
   }
 }
