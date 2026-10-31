@@ -857,5 +857,20 @@
       "2026-10-30_7-aguas-vermelho.jpg",
       "2026-10-30_8-glossario.jpg"
     ]
+  },
+  "2026-10-31": {
+    "dia_do_ciclo": 19,
+    "bloco": "Pico",
+    "foco": "Ritmo",
+    "slides": [
+      "2026-10-31_1-capa.jpg",
+      "2026-10-31_2-verde.jpg",
+      "2026-10-31_3-amarelo.jpg",
+      "2026-10-31_4-vermelho.jpg",
+      "2026-10-31_5-app.jpg",
+      "2026-10-31_6-aguas-amarelo.jpg",
+      "2026-10-31_7-aguas-vermelho.jpg",
+      "2026-10-31_8-glossario.jpg"
+    ]
   }
 }
