@@ -917,5 +917,20 @@
       "2026-11-03_7-aguas-vermelho.jpg",
       "2026-11-03_8-glossario.jpg"
     ]
+  },
+  "2026-11-04": {
+    "dia_do_ciclo": 23,
+    "bloco": "Regeneração",
+    "foco": "Resistência",
+    "slides": [
+      "2026-11-04_1-capa.jpg",
+      "2026-11-04_2-verde.jpg",
+      "2026-11-04_3-amarelo.jpg",
+      "2026-11-04_4-vermelho.jpg",
+      "2026-11-04_5-app.jpg",
+      "2026-11-04_6-aguas-amarelo.jpg",
+      "2026-11-04_7-aguas-vermelho.jpg",
+      "2026-11-04_8-glossario.jpg"
+    ]
   }
 }
