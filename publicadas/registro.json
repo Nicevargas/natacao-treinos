@@ -1007,5 +1007,20 @@
       "2026-11-09_7-aguas-vermelho.jpg",
       "2026-11-09_8-glossario.jpg"
     ]
+  },
+  "2026-11-10": {
+    "dia_do_ciclo": 1,
+    "bloco": "Base",
+    "foco": "Técnica",
+    "slides": [
+      "2026-11-10_1-capa.jpg",
+      "2026-11-10_2-verde.jpg",
+      "2026-11-10_3-amarelo.jpg",
+      "2026-11-10_4-vermelho.jpg",
+      "2026-11-10_5-app.jpg",
+      "2026-11-10_6-aguas-amarelo.jpg",
+      "2026-11-10_7-aguas-vermelho.jpg",
+      "2026-11-10_8-glossario.jpg"
+    ]
   }
 }
