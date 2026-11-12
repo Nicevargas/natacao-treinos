@@ -1037,5 +1037,20 @@
       "2026-11-11_7-aguas-vermelho.jpg",
       "2026-11-11_8-glossario.jpg"
     ]
+  },
+  "2026-11-12": {
+    "dia_do_ciclo": 3,
+    "bloco": "Base",
+    "foco": "Velocidade",
+    "slides": [
+      "2026-11-12_1-capa.jpg",
+      "2026-11-12_2-verde.jpg",
+      "2026-11-12_3-amarelo.jpg",
+      "2026-11-12_4-vermelho.jpg",
+      "2026-11-12_5-app.jpg",
+      "2026-11-12_6-aguas-amarelo.jpg",
+      "2026-11-12_7-aguas-vermelho.jpg",
+      "2026-11-12_8-glossario.jpg"
+    ]
   }
 }
