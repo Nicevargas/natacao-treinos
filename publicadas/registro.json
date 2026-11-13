@@ -1052,5 +1052,20 @@
       "2026-11-12_7-aguas-vermelho.jpg",
       "2026-11-12_8-glossario.jpg"
     ]
+  },
+  "2026-11-13": {
+    "dia_do_ciclo": 4,
+    "bloco": "Base",
+    "foco": "Estilos",
+    "slides": [
+      "2026-11-13_1-capa.jpg",
+      "2026-11-13_2-verde.jpg",
+      "2026-11-13_3-amarelo.jpg",
+      "2026-11-13_4-vermelho.jpg",
+      "2026-11-13_5-app.jpg",
+      "2026-11-13_6-aguas-amarelo.jpg",
+      "2026-11-13_7-aguas-vermelho.jpg",
+      "2026-11-13_8-glossario.jpg"
+    ]
   }
 }
