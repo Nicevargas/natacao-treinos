@@ -1082,5 +1082,20 @@
       "2026-11-14_7-aguas-vermelho.jpg",
       "2026-11-14_8-glossario.jpg"
     ]
+  },
+  "2026-11-15": {
+    "dia_do_ciclo": 6,
+    "bloco": "Base",
+    "foco": "Força específica",
+    "slides": [
+      "2026-11-15_1-capa.jpg",
+      "2026-11-15_2-verde.jpg",
+      "2026-11-15_3-amarelo.jpg",
+      "2026-11-15_4-vermelho.jpg",
+      "2026-11-15_5-app.jpg",
+      "2026-11-15_6-aguas-amarelo.jpg",
+      "2026-11-15_7-aguas-vermelho.jpg",
+      "2026-11-15_8-glossario.jpg"
+    ]
   }
 }
